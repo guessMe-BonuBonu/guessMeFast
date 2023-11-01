@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
-import StartPage from "./components/QuestionPage/QuestionPage"
-import QuestionPage from "./components/StartPage/StartPage";
+import StartPage from "./components/StartPage/StartPage";
+import QuestionPage from "./components/QuestionPage/QuestionPage";
 import { createRoot } from "react-dom/client";
 
 import {
