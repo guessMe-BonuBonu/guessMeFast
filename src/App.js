@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// import './App.css';
+// import StartPage  from './components/StartPage/StartPage';
+// import QuestionPage from "./components/QuestionPage/QuestionPage"
 
-export default App;
+// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// function App() {
+//   return (
+//     <Router>
+//       <Routes>
+//         <Route path="/" element={<StartPage/>}/>
+//         <Route path="/question" element={<QuestionPage/>}/>
+//       </Routes>
+//     </Router>
+//   );
+// }
+
+// export default App;
