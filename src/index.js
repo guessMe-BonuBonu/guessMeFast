@@ -1,7 +1,9 @@
 import React from "react";
+import { RecoilRoot } from "recoil";
 import "./index.css";
 import StartPage from "./components/StartPage/StartPage";
 import QuestionPage from "./components/QuestionPage/QuestionPage";
+import UrlResultPage from "./components/UrlResultPage/UrlResultPage";
 import { createRoot } from "react-dom/client";
 
 import {
@@ -21,9 +23,17 @@ const router = createBrowserRouter([
     path: "/question",
     element: <QuestionPage />,
   },
+  //url결과페이지
+  {
+    path:"/urlresult",
+    element: <UrlResultPage/>,
+  }
 ]);
 createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <RecoilRoot>
+    <RouterProvider router={router} />
+  </RecoilRoot>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function
