@@ -1,31 +1,43 @@
 import React from "react";
-import "./QuestionPage.css";
+import style from "./QuestionPage.module.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Progressbar from "../Progressbar/Progressbar";
+import {useRecoilState} from "recoil";
+import {urlSave} from "../../recoils/Recoil";
+import { useNavigate } from "react-router-dom";
+
 export default function QuestionPage() {
   const [info, setInfo] = useState([]);
-  const [QuestionId, setQuestionId] = useState(0);
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState([]);
-  useEffect(() => {
-    const storedData = JSON.parse(localStorage.getItem("info")) || [];
-    setInfo(storedData);
-    const storedQuestionId =
-      JSON.parse(localStorage.getItem("questionId")) || 0;
-    setQuestionId(storedQuestionId);
-  }, []);
-  useEffect(() => {
-    localStorage.setItem("questionId", QuestionId);
-  }, [QuestionId]);
+  const [page,setPage]=useState(0);
+  const [maxPage,setMaxPage]=useState(7);
+  const [url,setUrl]=useRecoilState(urlSave);
+
+
+  const navigate=useNavigate();
+  // useEffect(() => {
+  //   const storedData = JSON.parse(localStorage.getItem("info")) || [];
+  //   setInfo(storedData);
+  //   const storedQuestionId =
+  //     JSON.parse(localStorage.getItem("questionId")) || 0;
+  //   setQuestionId(storedQuestionId);
+  // }, []);
+
+
 
   const checkPost = async () => {
+    console.log("answers : " + answers);
+    console.log("question : "+questions);
     try {
       const response = await axios.post("http://27.96.131.106:9998/make-me", {
         name: "hee" /*api 양식*/,
-        questions: [1, 2, 3, 4, 5, 6, 4, 8],
-        answers: [0, 1, 2, 3, 4, 5, 9, 2],
+        questions: questions,
+        answers: answers,
       });
-      console.log(response);
+      console.log(response.data);
+      setUrl(response.data);
     } catch (error) {
       console.error(error);
     }
@@ -73,35 +85,39 @@ export default function QuestionPage() {
       ans: ["봄", "여름", "가을", "겨울"],
     },
   ];
+  useEffect(()=>{
+    console.log("answers = " + answers);
+  },[answers]);
+
   const saveInfo = (index) => {
-    const findId = info.findIndex((item) => item.index === QuestionId);
-    console.log(QuestionId);
-    if (findId !== -1) {
-      const storedData = JSON.parse(localStorage.getItem("Info")) || [];
-      storedData[QuestionId] = { index: QuestionId, answer: index };
-      localStorage.setItem("Info", JSON.stringify(storedData));
-    } else {
-      const newItem = { index: QuestionId, answer: index };
-      const updatedArray = [...info, newItem];
-      setInfo(updatedArray);
-      localStorage.setItem("Info", JSON.stringify(updatedArray));
+    // const findId = dataSet.findIndex((item) => item.index === page);
+
+    if(answers.length<=maxPage){
+      setAnswers([...answers,index]);
+      setQuestions([...questions,page]);
     }
-    if (QuestionId < 7) setQuestionId((QuestionId) => QuestionId + 1);
+
+    if(page<maxPage){
+      setPage(page+1);
+    }
+    
   };
 
   const check = () => {
-    console.log(localStorage.getItem("Info"));
-    setQuestions(info.map((item) => item.index));
-    setAnswers(info.map((item) => item.answer));
     checkPost();
+    navigate("/urlresult");
   };
 
   return (
-    <div className="backImg">
-      <div className="questionBottom">
-        <div>{dataSet[QuestionId].que}</div>
+    <div className={style.backImg}>
+      <div className={style.topContainer}>
+        <Progressbar page={page}/>
+      </div>
+      
+      <div className={style.bottomContainer}>
+        <div>{dataSet[page].que}</div>
         <div>
-          {dataSet[QuestionId].ans.map((ans, index) => (
+          {dataSet[page].ans.map((ans, index) => (
             <button
               style={{
                 marginTop: index === 0 ? "73px" : null,
@@ -126,7 +142,7 @@ export default function QuestionPage() {
         <button
           onClick={(event) => {
             event.preventDefault();
-            if (QuestionId > 0) setQuestionId(QuestionId - 1);
+            if (page > 0) setPage(page - 1);
           }}
         >
           왼쪽

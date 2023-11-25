@@ -1,7 +1,13 @@
-.questionBottom {
-    margin-top: 442px;
+
+.backImg {
+  background-color: #f7c9c9;
+  height: 100vh;
+  width: 100vw;
+}
+.bottomContainer {
+    /* margin-top: 40vh; */
     width: 100vw;
-    height: 638px;
+    height: 60vh;
     background-color: white;
     border-radius: 200px 0 0 0;
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
@@ -11,9 +17,9 @@
     align-items: center;
     position: fixed;
   }
-  .backImg {
-    background-color: #f7c9c9;
-    height: 100vh;
-    width: 100vw;
+  .topContainer{
+    height:40vh;
+    
   }
+
   
