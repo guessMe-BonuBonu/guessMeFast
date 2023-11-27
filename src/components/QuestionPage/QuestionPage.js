@@ -6,6 +6,7 @@ import Progressbar from "../Progressbar/Progressbar";
 import {useRecoilState} from "recoil";
 import {urlSave} from "../../recoils/Recoil";
 import { useNavigate } from "react-router-dom";
+import {nameState} from "../../recoils/Recoil";
 
 export default function QuestionPage() {
   const [info, setInfo] = useState([]);
@@ -14,16 +15,12 @@ export default function QuestionPage() {
   const [page,setPage]=useState(0);
   const [maxPage,setMaxPage]=useState(7);
   const [url,setUrl]=useRecoilState(urlSave);
+  const [name,setName]=useRecoilState(nameState);
 
+ 
 
   const navigate=useNavigate();
-  // useEffect(() => {
-  //   const storedData = JSON.parse(localStorage.getItem("info")) || [];
-  //   setInfo(storedData);
-  //   const storedQuestionId =
-  //     JSON.parse(localStorage.getItem("questionId")) || 0;
-  //   setQuestionId(storedQuestionId);
-  // }, []);
+
 
 
 
@@ -32,11 +29,11 @@ export default function QuestionPage() {
     console.log("question : "+questions);
     try {
       const response = await axios.post("http://27.96.131.106:9998/make-me", {
-        name: "hee" /*api 양식*/,
+        name: name /*api 양식*/,
         questions: questions,
         answers: answers,
       });
-      console.log(response.data);
+      console.log(response);
       setUrl(response.data);
     } catch (error) {
       console.error(error);
@@ -112,24 +109,17 @@ export default function QuestionPage() {
     <div className={style.backImg}>
       <div className={style.topContainer}>
         <Progressbar page={page}/>
+        <div className={style.queDiv}>"{dataSet[page].que}"</div>
       </div>
       
       <div className={style.bottomContainer}>
-        <div>{dataSet[page].que}</div>
+        
         <div>
           {dataSet[page].ans.map((ans, index) => (
             <button
+              className={style.selectBtn}
               style={{
                 marginTop: index === 0 ? "73px" : null,
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: "#96A9D1",
-                width: "606px",
-                borderRadius: "90px",
-                height: "90px",
-                marginBottom: "25px",
-                boxShadow: "2px 2px 2px 2px gray",
               }}
               key={index}
               onClick={() => saveInfo(index)}
