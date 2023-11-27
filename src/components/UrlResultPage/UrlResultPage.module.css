@@ -14,8 +14,8 @@
     align-items: center;
     flex-direction: column;
 }
-.middleBox{
-    width:80vw;
+.middleBackground{
+    width:70vw;
     height:70vh;
     background-color: white;
     position: relative;
@@ -28,4 +28,73 @@
     position: relative;
     /* top:8vh; */
     z-index: 10;
+}
+
+.topContainer{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height:30vh;
+    margin-top:12vh;
+}
+.bottomContainer{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height:30vh;
+}
+
+.fontDiv{
+    font-family: "ChangwonDangamAsac";
+    font-size:6vh;
+   
+}
+
+.urlDiv{
+    /* background-color: #c2c1c1; */
+    height:5vh;
+    /* width:50vw; */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top:1.5vh;
+   
+}
+.urlP{
+    background-color: #EEEEEE;
+    border-radius:8px;
+    border: 2px solid #b1b0b0;
+    height:4vh;
+    width:40vw;
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.bottomContainer{
+    display:flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+.fontDiv2{
+    font-family: "ChangwonDangamAsac";
+    font-size:2.5vh;
+}
+.copyBtn{
+    width:30vh;
+    height:8vh;
+    font-size: 3.5vh;
+    border-radius: 104px;
+    color:white;
+    text-shadow: 2px 4px 2px gray;
+    font-family: "Jalnan";
+    background-color: #96A9D1;
+    border:none;
+}
+
+.copyBtn:hover{
+    background-color: #8c9bbd;
 }
