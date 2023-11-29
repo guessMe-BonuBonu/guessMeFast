@@ -121,7 +121,8 @@ export default function QuestionPage() {
             </button>
           ))}
         </div>
-        <button onClick={check}>확인</button>
+        {page === 7 && <button onClick={check}>확인</button>}
+
         <button
           onClick={(event) => {
             event.preventDefault();
