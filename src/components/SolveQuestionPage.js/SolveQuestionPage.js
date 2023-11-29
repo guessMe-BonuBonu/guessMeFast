@@ -1,39 +1,39 @@
 import React from "react";
-import style from "./QuestionPage.module.css";
 import { useState, useEffect } from "react";
+import style from "./SolveQuestionPage.module.css";
 import axios from "axios";
 import Progressbar from "../Progressbar/Progressbar";
 import { useRecoilState } from "recoil";
 import { urlSave } from "../../recoils/Recoil";
 import { useNavigate } from "react-router-dom";
 import { nameState } from "../../recoils/Recoil";
-export default function QuestionPage() {
+export default function SolvePage() {
   const [info, setInfo] = useState([]);
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState([]);
   const [page, setPage] = useState(0);
   const [maxPage, setMaxPage] = useState(7);
+  const [geturl, setGetUrl] = useState([]);
   const [url, setUrl] = useRecoilState(urlSave);
-
-  const [name, setName] = useRecoilState(nameState);
-
   const navigate = useNavigate();
 
-  const checkPost = async () => {
-    console.log("answers : " + answers);
-    console.log("question : " + questions);
-    try {
-      const response = await axios.post("http://27.96.131.106:9998/make-me", {
-        name: name /*api 양식*/,
-        questions: questions,
-        answers: answers,
-      });
-      console.log(response);
-      setUrl(response.data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  //   const checkGet = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         `http://27.96.131.106:9998/find-me/${url}`
+  //       );
+  //       console.log(response);
+  //       setGetUrl(response.data);
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   };
+
+  //   useEffect(() => {
+  //     checkGet();
+  //   }, []); // 빈 배열을 전달하여 컴포넌트가 마운트될 때 한 번만 실행
+
+  console.log(geturl);
 
   const dataSet = [
     {
@@ -94,11 +94,6 @@ export default function QuestionPage() {
     }
   };
 
-  const check = () => {
-    checkPost();
-    navigate("/urlresult");
-  };
-
   return (
     <div className={style.backImg}>
       <div className={style.topContainer}>
@@ -121,7 +116,7 @@ export default function QuestionPage() {
             </button>
           ))}
         </div>
-        <button onClick={check}>확인</button>
+
         <button
           onClick={(event) => {
             event.preventDefault();
