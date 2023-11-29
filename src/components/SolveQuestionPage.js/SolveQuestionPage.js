@@ -17,21 +17,21 @@ export default function SolvePage() {
   const [url, setUrl] = useRecoilState(urlSave);
   const navigate = useNavigate();
 
-  //   const checkGet = async () => {
-  //     try {
-  //       const response = await axios.get(
-  //         `http://27.96.131.106:9998/find-me/${url}`
-  //       );
-  //       console.log(response);
-  //       setGetUrl(response.data);
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   };
+  const checkGet = async () => {
+    try {
+      const response = await axios.get(
+        `http://27.96.131.106:9998/find-me/${url}`
+      );
+      console.log(response);
+      setGetUrl(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
-  //   useEffect(() => {
-  //     checkGet();
-  //   }, []); // 빈 배열을 전달하여 컴포넌트가 마운트될 때 한 번만 실행
+  useEffect(() => {
+    checkGet();
+  }, []); // 빈 배열을 전달하여 컴포넌트가 마운트될 때 한 번만 실행
 
   console.log(geturl);
 
@@ -93,7 +93,14 @@ export default function SolvePage() {
       setPage(page + 1);
     }
   };
-
+  const removeLastIndex = () => {
+    setInfo((prevInfo) => {
+      // 배열의 마지막 요소를 삭제한 새로운 배열을 반환
+      const newInfo = [...prevInfo];
+      newInfo.pop();
+      return newInfo;
+    });
+  };
   return (
     <div className={style.backImg}>
       <div className={style.topContainer}>
@@ -102,6 +109,16 @@ export default function SolvePage() {
       </div>
 
       <div className={style.bottomContainer}>
+        <div className={style.leftBar}>
+          <button
+            className="leftBtn"
+            onClick={(event) => {
+              event.preventDefault();
+              removeLastIndex();
+              if (page > 0) setPage(page - 1);
+            }}
+          ></button>
+        </div>
         <div>
           {dataSet[page].ans.map((ans, index) => (
             <button
@@ -116,15 +133,7 @@ export default function SolvePage() {
             </button>
           ))}
         </div>
-
-        <button
-          onClick={(event) => {
-            event.preventDefault();
-            if (page > 0) setPage(page - 1);
-          }}
-        >
-          왼쪽
-        </button>
+        {page === 7 && <button>확인</button>}
       </div>
     </div>
   );

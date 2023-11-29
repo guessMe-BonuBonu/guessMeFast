@@ -27,6 +27,8 @@
   color: white;
   text-shadow: 2px 4px 2px gray;
   font-family: "Jalnan";
+  position: relative;
+  right: 2vw;
 }
 .selectBtn:hover {
   background-color: #8c9bbd;
@@ -43,9 +45,27 @@
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   position: fixed;
+}
+.leftBar button {
+  background-color: white;
+  border: none;
+  width: 100px;
+  background-image: url("../../img/Vector.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 70px;
+  outline: none;
+  position: relative;
+  right: 4vw;
+}
+.leftBar {
+  display: flex;
+  position: relative;
+  justify-content: center;
 }
 .topContainer {
   height: 40vh;
@@ -102,7 +122,6 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     position: fixed;
   }
   .topContainer {
