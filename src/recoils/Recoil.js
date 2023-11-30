@@ -10,5 +10,6 @@ export const urlGet = atom({
 });
 export const nameState = atom({
   key: "nameState",
-  default: "리안",
+  default: "",
 });
+

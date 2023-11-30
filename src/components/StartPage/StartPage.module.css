@@ -11,7 +11,7 @@
     position: fixed;
   }
   .bottom {
-    text-align: center;
+   text-align: center;
     /* display:flex; */
   }
   .quizButton {

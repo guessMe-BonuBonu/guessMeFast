@@ -10,6 +10,8 @@ const UrlResultPage = () => {
   const [name, setName] = useRecoilState(nameState);
 
   const url = useRecoilValue(urlSave);
+
+  // console.log("urlname : "+name);
   const handleCopyClipBoard = async (text) => {
     if (urlSave !== "") {
       try {
@@ -20,7 +22,8 @@ const UrlResultPage = () => {
       }
     }
   };
-  console.log(url);
+  // console.log(url);
+
   //font 같은거만 빼서 className주기
   return (
     <div className={style.container}>
