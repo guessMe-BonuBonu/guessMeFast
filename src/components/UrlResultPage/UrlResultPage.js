@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import axios from "axios";
 const UrlResultPage = () => {
   const [name, setName] = useRecoilState(nameState);
-  const [geturl, setGetUrl] = useRecoilState(urlGet);
+
   const url = useRecoilValue(urlSave);
   const handleCopyClipBoard = async (text) => {
     if (urlSave !== "") {
@@ -21,22 +21,6 @@ const UrlResultPage = () => {
     }
   };
   console.log(url);
-  const checkGet = async () => {
-    try {
-      const response = await axios.get(
-        `http://27.96.131.106:9998/find-me/${url}`
-      );
-      console.log(response);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  useEffect(() => {
-    checkGet();
-  }, []); // 빈 배열을 전달하여 컴포넌트가 마운트될 때 한 번만 실행
-
-  console.log(geturl);
   //font 같은거만 빼서 className주기
   return (
     <div className={style.container}>
