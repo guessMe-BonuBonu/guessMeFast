@@ -22,13 +22,8 @@ const UrlResultPage = () => {
       }
     }
   };
-  console.log(url);
-<<<<<<< Updated upstream
-=======
+  // console.log(url);
 
-
-  console.log(geturl);
->>>>>>> Stashed changes
   //font 같은거만 빼서 className주기
   return (
     <div className={style.container}>
