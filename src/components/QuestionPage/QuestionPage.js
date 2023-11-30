@@ -7,6 +7,7 @@ import { useRecoilState } from "recoil";
 import { urlSave } from "../../recoils/Recoil";
 import { useNavigate } from "react-router-dom";
 import { nameState } from "../../recoils/Recoil";
+import { randomSubset } from "../Data";
 export default function QuestionPage() {
   const [info, setInfo] = useState([]);
   const [questions, setQuestions] = useState([]);
@@ -34,59 +35,18 @@ export default function QuestionPage() {
       console.error(error);
     }
   };
+  console.log(url);
 
-  const dataSet = [
-    {
-      id: 1,
-      que: "리안의 공강은 몇일",
-      ans: ["1일", "2~3일", "4일", "없음"],
-    },
-    {
-      id: 2,
-      que: "좋아하는 학식 메뉴는?",
-      ans: ["세종대왕돈까스", "육회비빔밥", "소금구이덮밥", "쫑쫑덮밥"],
-    },
-    {
-      id: 3,
-      que: "나의 통학 시간은?",
-      ans: ["~30분", "30분~1시간", "1시간~2시간", "2시간 이상"],
-    },
-    {
-      id: 4,
-      que: "나는 계획형일까 즉흥형일까",
-      ans: ["계획형", "즉흥형"],
-    },
-    {
-      id: 5,
-      que: "좋아하는 영화 취향",
-      ans: ["로맨스", "스릴러/공포", "판타지", "액션/코미디"],
-    },
-    {
-      id: 6,
-      que: "힘들 때 하는 일",
-      ans: ["울기", "술마시기", "친구만나기", "게임하기"],
-    },
-    {
-      id: 7,
-      que: "내 혈액형은",
-      ans: ["A형", "B형", "AB형", "O형"],
-    },
-    {
-      id: 8,
-      que: "내가 좋아하는 계절은",
-      ans: ["봄", "여름", "가을", "겨울"],
-    },
-  ];
   useEffect(() => {
     console.log("answers = " + answers);
   }, [answers]);
 
-  const saveInfo = (index) => {
+  const saveInfo = (index, id) => {
     // const findId = dataSet.findIndex((item) => item.index === page);
 
     if (answers.length <= maxPage) {
       setAnswers([...answers, index]);
-      setQuestions([...questions, page]);
+      setQuestions([...questions, id]);
     }
 
     if (page < maxPage) {
@@ -98,24 +58,26 @@ export default function QuestionPage() {
     checkPost();
     navigate("/urlresult");
   };
+  console.log(answers);
+  console.log(questions);
 
   return (
     <div className={style.backImg}>
       <div className={style.topContainer}>
         <Progressbar page={page} />
-        <div className={style.queDiv}>"{dataSet[page].que}"</div>
+        <div className={style.queDiv}>"{randomSubset[page].que}"</div>
       </div>
 
       <div className={style.bottomContainer}>
         <div>
-          {dataSet[page].ans.map((ans, index) => (
+          {randomSubset[page].ans.map((ans, index) => (
             <button
               className={style.selectBtn}
               style={{
                 marginTop: index === 0 ? "73px" : null,
               }}
               key={index}
-              onClick={() => saveInfo(index)}
+              onClick={() => saveInfo(index, randomSubset[page].id)}
             >
               {ans}
             </button>
