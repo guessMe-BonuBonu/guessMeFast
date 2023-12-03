@@ -1,5 +1,6 @@
 import style from "./UrlResultPage.module.css";
 import tagImg from "../../img/tagImg.png";
+import arrowing2 from "../../img/arrowImg2.png";
 import { urlSave } from "../../recoils/Recoil";
 import { useRecoilValue, useRecoilState } from "recoil";
 import { nameState } from "../../recoils/Recoil";
@@ -60,12 +61,18 @@ const UrlResultPage = () => {
             <p className={style.fontDiv2}>
               친구에게 공유해 우정을 테스트 하세요
             </p>
-            <button
-              className={style.copyBtn}
-              onClick={() => handleCopyClipBoard(`${url}`)}
-            >
-              URL 링크 복사
-            </button>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <button
+                className={style.copyBtn}
+                onClick={() => handleCopyClipBoard(`${url}`)}
+              >
+                URL 링크 복사
+              </button>
+            </div>
+            <img
+              src={arrowing2}
+              style={{ width: "7vw", position: "fixed", marginLeft: "18%" }}
+            />
           </div>
         </div>
       </div>

@@ -1,100 +1,119 @@
-.container{
+.container {
     background-color: white;
-    height:100vh;
-    width:100vw;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
 }
-.backgroundImg{
+
+.backgroundImg {
     background-color: #F7C9C9;
-    border-radius: 0 0 200px 0 ;
+    border-radius: 0 0 200px 0;
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
-    height:100vh;
-    width:100vw;
-    display:flex;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.middleBackground{
-    width:70vw;
-    height:70vh;
+
+.middleBackground {
+    width: 70vw;
+    height: 70vh;
     background-color: white;
     position: relative;
-    bottom:10vh;
-
+    bottom: 10vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
-.tagImg{
-    width:18vh;
-    height:20vh;
+
+.tagImg {
+    width: 18vh;
+    height: 20vh;
     position: relative;
     /* top:8vh; */
     z-index: 10;
 }
 
-.topContainer{
-    display:flex;
+.topContainer {
+    display: flex;
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    height:30vh;
-    margin-top:12vh;
-}
-.bottomContainer{
-    display:flex;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    height:30vh;
+    height: 30vh;
+    /* margin-top:12vh; */
 }
 
-.fontDiv{
+.bottomContainer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    /* height:30vh; */
+    margin-top: 10vh;
+}
+
+.arrowing2 {
+    width: 7vw;
+    z-index: 1;
+    margin-right: 30%;
+}
+
+.fontDiv {
     font-family: "ChangwonDangamAsac";
-    font-size:6vh;
-   
+    font-size: 6vh;
 }
 
-.urlDiv{
+.urlDiv {
     /* background-color: #c2c1c1; */
-    height:5vh;
+    height: 5vh;
     /* width:50vw; */
     display: flex;
     text-align: center;
     justify-content: center;
-    margin-top:1.5vh;
-   
+    margin-top: 1.5vh;
+
 }
-.urlP{
+
+.urlP {
     background-color: #EEEEEE;
-    border-radius:8px;
+    border-radius: 8px;
     border: 2px solid #b1b0b0;
-    height:4vh;
-    width:40vw;
-    display:flex;
+    height: 4vh;
+    width: 40vw;
+    display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
 }
-.bottomContainer{
-    display:flex;
-    text-align: center;
-    align-items: center;
-    flex-direction: column;
-}
-.fontDiv2{
+
+.fontDiv2 {
     font-family: "ChangwonDangamAsac";
-    font-size:2.5vh;
+    font-size: 2.5vh;
+    display: flex;
+    justify-content: center;
 }
-.copyBtn{
-    width:30vh;
-    height:8vh;
+
+.copyBtn {
+    width: 30vh;
+    height: 8vh;
     font-size: 3.5vh;
     border-radius: 104px;
-    color:white;
+    color: white;
     text-shadow: 2px 4px 2px gray;
     font-family: "Jalnan";
     background-color: #96A9D1;
-    border:none;
+    border: none;
+    /* position: fixed; */
+    bottom: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.copyBtn:hover{
+.copyBtn:hover {
     background-color: #8c9bbd;
 }
