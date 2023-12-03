@@ -18,7 +18,8 @@ export default function QuestionPage() {
 
   const [name, setName] = useRecoilState(nameState);
 
- 
+  const [checkState, setCheckState] = useState(false);
+
   const navigate = useNavigate();
 
   const checkPost = async () => {
@@ -32,6 +33,7 @@ export default function QuestionPage() {
       });
       console.log(response);
       setUrl(response.data);
+      setCheckState(false);
     } catch (error) {
       console.error(error);
     }
@@ -91,27 +93,38 @@ export default function QuestionPage() {
       setAnswers([...answers, index]);
       setQuestions([...questions, dataSet[page].id]);
     }
-   
+
+
+    if (page === 7) {
+      // check();
+      setCheckState(true);
+    }
 
     if (page < maxPage) {
       setPage(page + 1);
     }
 
-    
   };
+
+  useEffect(() => {
+    if (checkState === true)
+      check();
+  }, [checkState]);
+
 
   const check = () => {
     checkPost();
     navigate("/urlresult");
   };
 
-  const handleBackBtn=(e)=>{
-      e.preventDefault();
-      if (page > 0) setPage(page - 1);
-      answers.pop();
-      questions.pop();
+  const handleBackBtn = (e) => {
+    e.preventDefault();
+    if (page > 0) setPage(page - 1);
+    answers.pop();
+    questions.pop();
   };
-  
+
+
 
   return (
     <div className={style.backImg}>
@@ -121,7 +134,7 @@ export default function QuestionPage() {
       </div>
 
       <div className={style.bottomContainer}>
-       <button onClick={handleBackBtn}>
+        <button onClick={handleBackBtn}>
           {"<"}
         </button>
         <div>
@@ -136,22 +149,13 @@ export default function QuestionPage() {
             >
               {ans}
             </button>
+
           ))}
         </div>
-        {page === 7 && <button onClick={check}>확인</button>}
-
-        <button
-          onClick={(event) => {
-            event.preventDefault();
-            if (page > 0) setPage(page - 1);
-          }}
-        >
-          왼쪽
-        </button>
 
 
       </div>
-      {page===7?<button onClick={check}>확인</button>:null}
+
     </div>
   );
 }

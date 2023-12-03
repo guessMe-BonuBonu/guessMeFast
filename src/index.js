@@ -13,8 +13,10 @@ import {
   // Route,
   // Link,
 } from "react-router-dom";
+
 import SolvePage from "./components/SolveQuestionPage.js/SolveQuestionPage";
 import GetInfo from "./components/GetInfo/GetInfo";
+
 const router = createBrowserRouter([
   //시작페이지
   {
@@ -44,6 +46,7 @@ const router = createBrowserRouter([
     element: <MyScore />,
   },
 ]);
+
 createRoot(document.getElementById("root")).render(
   <RecoilRoot>
     <RouterProvider router={router} />
