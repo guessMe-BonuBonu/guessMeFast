@@ -39,12 +39,9 @@ const router = createBrowserRouter([
   },
   {
     path: "/getinfo",
-    element: <GetInfo />,
+    element: <GetInfo />
   },
-  {
-    path: "/score/:id",
-    element: <MyScore />,
-  },
+
 ]);
 
 createRoot(document.getElementById("root")).render(
