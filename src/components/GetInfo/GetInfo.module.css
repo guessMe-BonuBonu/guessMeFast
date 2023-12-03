@@ -1,74 +1,71 @@
-.container{
-    display:flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 .top {
-    width: 100vw;
-    height: 75vh;
-    background-color: #f7c9c9;
-    border-radius: 0 0 200px 0;
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .nameInsertImg{
-    width: 60vw;
-    height: 40vh;
-    background-image: url("../../img/nameInfo.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    margin-top: 10vh;
-  }
-  .inputBox{
-    width:50vw;
-    height:10vh;
-    text-align: center;
-    font-size:4vh;
-    border:none;
-    box-shadow: 2px -3px 0px 0px rgb(180, 180, 180);
-    font-family: "Jalnan";
-    border-radius:10px;
+  width: 100vw;
+  height: 75vh;
+  background-color: #f7c9c9;
+  border-radius: 0 0 200px 0;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-  .inputBox:focus{
-    outline:none;
-  }
-  .bottom {
-    text-align: center;
-    height:30vh;
-    width:100vw;
-    margin-top:5vh;
-    /* background-color: red; */
-    /* display:flex; */
-  }
-  .checkButton {
-    width: 20vw;
-    height: 10vh;
-    background-color: #96a9d1;
-    border-radius: 50px;
-    /* margin-top: 50vh; */
-    font-size: 30px;
-    color: white;
-    border: none;
-    text-shadow: 0 3px 4px rgba(0, 0, 0, 0.8);
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-    font-weight: bold;
-    /* position: fixed; */
-    justify-content: center;
-    align-items: center;
-    bottom: 12vh;
-    right: 40vw;
-    font-family: "Jalnan";
-  }
-  .checkButton:hover {
-    background-color: #8c9bbd;
-    cursor: pointer;
-    border:none;
-  }
-
-
-  
+.nameInsertImg {
+  width: 60vw;
+  height: 40vh;
+  background-image: url("../../img/nameInfo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-top: 10vh;
+}
+.inputBox {
+  width: 50vw;
+  height: 10vh;
+  text-align: center;
+  font-size: 4vh;
+  border: none;
+  box-shadow: 2px -3px 0px 0px rgb(180, 180, 180);
+  font-family: "Jalnan";
+  border-radius: 10px;
+}
+.inputBox:focus {
+  outline: none;
+}
+.bottom {
+  text-align: center;
+  height: 30vh;
+  width: 100vw;
+  margin-top: 5vh;
+  /* background-color: red; */
+  /* display:flex; */
+}
+.checkButton {
+  width: 20vw;
+  height: 10vh;
+  background-color: #96a9d1;
+  border-radius: 50px;
+  /* margin-top: 50vh; */
+  font-size: 30px;
+  color: white;
+  border: none;
+  text-shadow: 0 3px 4px rgba(0, 0, 0, 0.8);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  /* position: fixed; */
+  justify-content: center;
+  align-items: center;
+  bottom: 12vh;
+  right: 40vw;
+  font-family: "Jalnan";
+}
+.checkButton:hover {
+  background-color: #8c9bbd;
+  cursor: pointer;
+  border: none;
+}

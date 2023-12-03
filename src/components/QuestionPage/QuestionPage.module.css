@@ -6,98 +6,95 @@
 /* .selectBtn{
   background-color: red;
 } */
-.queDiv{
+.queDiv {
   font-family: "ChangwonDangamAsac";
-  font-size:7vh;
+  font-size: 7vh;
 }
-.selectBtn{
+.selectBtn {
   background-color: #8c9bbd;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #96A9D1;
-  width:60vw;
+  background-color: #96a9d1;
+  width: 60vw;
   border-radius: 90px;
-  height:8vh;
+  height: 8vh;
   margin-bottom: 3vh;
-  box-shadow: 2px 2px 2px 2px gray ;
+  box-shadow: 2px 2px 2px 2px gray;
   border: none;
-  font-size:5vh;
+  font-size: 5vh;
   font-weight: 700;
-  color:white;
+  color: white;
   text-shadow: 2px 4px 2px gray;
   font-family: "Jalnan";
-  
 }
-.selectBtn:hover{
+.selectBtn:hover {
   background-color: #8c9bbd;
   cursor: pointer;
   border: none;
 }
 
 .bottomContainer {
-    /* margin-top: 40vh; */
-    width: 100vw;
-    height: 60vh;
-    background-color: white;
-    border-radius: 200px 0 0 0;
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-    justify-content: center;
-    /* text-align: center; */
-    position: fixed;
-  }
-  .topContainer{
-    height:40vh;
-    display:flex;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    /* position:fixed; */
-  }
-
-@media(max-width:800px){
-    
-.backImg {
-  background-color: #f7c9c9;
-  height: 100vh;
+  /* margin-top: 40vh; */
   width: 100vw;
+  height: 60vh;
+  background-color: white;
+  border-radius: 200px 0 0 0;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* text-align: center; */
+  position: fixed;
 }
-/* .selectBtn{
+.topContainer {
+  height: 40vh;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  /* position:fixed; */
+}
+
+@media (max-width: 800px) {
+  .backImg {
+    background-color: #f7c9c9;
+    height: 100vh;
+    width: 100vw;
+  }
+  /* .selectBtn{
   background-color: red;
 } */
-.queDiv{
-  font-family: "ChangwonDangamAsac";
-  font-size:10vw;
-}
-.selectBtn{
-  background-color: #8c9bbd;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #96A9D1;
-  width:60vw;
-  border-radius: 90px;
-  height:5vh;
-  margin-bottom: 3vh;
-  box-shadow: 2px 2px 2px 2px gray ;
-  border: none;
-  font-size:5vw;
-  font-weight: 700;
-  color:white;
-  text-shadow: 2px 4px 2px gray;
-  font-family: "Jalnan";
-  
-}
-.selectBtn:hover{
-  background-color: #8c9bbd;
-  cursor: pointer;
-  border: none;
-}
+  .queDiv {
+    font-family: "ChangwonDangamAsac";
+    font-size: 10vw;
+  }
+  .selectBtn {
+    background-color: #8c9bbd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #96a9d1;
+    width: 60vw;
+    border-radius: 90px;
+    height: 5vh;
+    margin-bottom: 3vh;
+    box-shadow: 2px 2px 2px 2px gray;
+    border: none;
+    font-size: 5vw;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 4px 2px gray;
+    font-family: "Jalnan";
+  }
+  .selectBtn:hover {
+    background-color: #8c9bbd;
+    cursor: pointer;
+    border: none;
+  }
 
-.bottomContainer {
+  .bottomContainer {
     /* margin-top: 40vh; */
     width: 100vw;
     height: 60vh;
@@ -105,19 +102,17 @@
     border-radius: 100px 0 0 0;
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
     text-align: center;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     /* text-align: center; */
     position: fixed;
   }
-  .topContainer{
-    height:40vh;
-    display:flex;
+  .topContainer {
+    height: 40vh;
+    display: flex;
     text-align: center;
     flex-direction: column;
     align-items: center;
   }
-
-
-  }
+}

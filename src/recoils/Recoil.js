@@ -13,3 +13,12 @@ export const nameState = atom({
   default: "",
 });
 
+export const questionState = atom({
+  key: "questionState",
+  default: [],
+});
+
+export const answerState = atom({
+  key: "answerState",
+  default: [],
+});

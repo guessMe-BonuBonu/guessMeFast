@@ -22,7 +22,21 @@ const UrlResultPage = () => {
       }
     }
   };
-  // console.log(url);
+  console.log(url);
+  const checkGet = async () => {
+    //서버에서 랜덤생성된 uri로 받아오는 axios
+    try {
+      const response = await axios.get(
+        `http://27.96.131.106:9998/find-me/${url}`
+      );
+      console.log(response); //추후에 지우기
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  useEffect(() => {
+    checkGet();
+  }, []);
 
   //font 같은거만 빼서 className주기
   return (

@@ -7,32 +7,16 @@ import { useRecoilState } from "recoil";
 import { urlSave } from "../../recoils/Recoil";
 import { useRecoilValue } from "recoil";
 import { dataSet, randomSubset } from "../Data";
+import { Link } from "react-router-dom";
 export default function SolvePage() {
-  const [info, setInfo] = useState([]);
-  const [questions, setQuestions] = useState([]);
-  const [answers, setAnswers] = useState([]);
+  const [info, setInfo] = useState([]); //사용자가 문제 푼 index가 들어잇다
+  const [questions, setQuestions] = useRecoilState([]);
+  const [answers, setAnswers] = useRecoilState([]);
   const [page, setPage] = useState(0);
   const [maxPage, setMaxPage] = useState(7);
   const [getUrl, setGetUrl] = useState();
   const value = useRecoilValue(urlSave);
   const [dataIndex, setDataIndex] = useState(0);
-  const checkGet = async () => {
-    //서버에서 랜덤생성된 uri로 받아오는 axios
-    try {
-      const response = await axios.get(
-        `http://27.96.131.106:9998/find-me/${value}`
-      );
-      console.log(response); //추후에 지우기
-      setGetUrl(response);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-  console.log(value); //recoil로 uri 찍는 부분
-
-  useEffect(() => {
-    checkGet();
-  }, []); // 빈 배열을 전달하여 컴포넌트가 마운트될 때 한 번만 실행
 
   const getData = {
     //실제 서버에서 받는 mockData
@@ -106,7 +90,11 @@ export default function SolvePage() {
             </button>
           ))}
         </div>
-        {page === 7 && <button>확인</button>}
+        {page === 7 && (
+          <Link to="/solve">
+            <button>확인</button>
+          </Link>
+        )}
       </div>
     </div>
   );

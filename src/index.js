@@ -4,6 +4,7 @@ import "./index.css";
 import StartPage from "./components/StartPage/StartPage";
 import QuestionPage from "./components/QuestionPage/QuestionPage";
 import UrlResultPage from "./components/UrlResultPage/UrlResultPage";
+import MyScore from "./components/MyScore/MyScore";
 import { createRoot } from "react-dom/client";
 
 import {
@@ -36,7 +37,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/getinfo",
-    element: <GetInfo/>
+    element: <GetInfo />,
+  },
+  {
+    path: "/score/:id",
+    element: <MyScore />,
   },
 ]);
 createRoot(document.getElementById("root")).render(

@@ -49,6 +49,16 @@ export const dataSet = [
     que: "내가 좋아하는 사람은",
     ans: ["ㄱㅈ", "ㄱㅈ", "ㄱㅈ", "ㄱㅈ"],
   },
+  {
+    id: 11,
+    que: "내가 좋아하는 보노보노는",
+    ans: ["ㄱㅈ", "ㄱㅈ", "ㄱㅈ", "ㄱㅈ"],
+  },
+  {
+    id: 12,
+    que: "리안아 지우야 고기묵자",
+    ans: ["ㅇㅋ", "ㅇㅋ", "ㅇㅋ", "ㅇㅋ"],
+  },
 ];
 
 const shuffleArray = (array) => {
@@ -80,4 +90,4 @@ const getRandomSubset = (array, count) => {
 };
 
 // 사용 예시
-export const randomSubset = getRandomSubset(dataSet, 8);
+export const randomSubset = getRandomSubset(dataSet, 10);
