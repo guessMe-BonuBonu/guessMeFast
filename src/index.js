@@ -14,7 +14,7 @@ import {
   // Link,
 } from "react-router-dom";
 
-import SolvePage from "./components/SolveQuestionPage.js/SolveQuestionPage";
+import SolvePage from "./components/SolveQuestionPage/SolveQuestionPage";
 import GetInfo from "./components/GetInfo/GetInfo";
 
 const router = createBrowserRouter([
@@ -40,6 +40,10 @@ const router = createBrowserRouter([
   {
     path: "/getinfo",
     element: <GetInfo />
+  },
+  {
+    path: "/score",
+    element: <MyScore />
   },
 
 ]);
