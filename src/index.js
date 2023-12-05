@@ -6,7 +6,6 @@ import QuestionPage from "./components/QuestionPage/QuestionPage";
 import UrlResultPage from "./components/UrlResultPage/UrlResultPage";
 import MyScore from "./components/MyScore/MyScore";
 import { createRoot } from "react-dom/client";
-
 import {
   createBrowserRouter,
   RouterProvider,
@@ -16,12 +15,16 @@ import {
 
 import SolvePage from "./components/SolveQuestionPage/SolveQuestionPage";
 import GetInfo from "./components/GetInfo/GetInfo";
-
+import StartPageUser from "./components/StartPageUser/StartPageUser";
 const router = createBrowserRouter([
   //시작페이지
   {
     path: "/",
     element: <StartPage />,
+  },
+  {
+    path: "/start",
+    element: <StartPageUser />,
   },
   //질문페이지
   {
@@ -34,7 +37,7 @@ const router = createBrowserRouter([
     element: <UrlResultPage />,
   },
   {
-    path: "/solve",
+    path: "/solve/:uri",
     element: <SolvePage />,
   },
   {
@@ -47,7 +50,6 @@ const router = createBrowserRouter([
   },
 
 ]);
-
 createRoot(document.getElementById("root")).render(
   <RecoilRoot>
     <RouterProvider router={router} />
