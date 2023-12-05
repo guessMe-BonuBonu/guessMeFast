@@ -8,10 +8,9 @@ import { urlSave } from "../../recoils/Recoil";
 import { useRecoilValue } from "recoil";
 import { dataSet, randomSubset } from "../Data";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 export default function SolvePage() {
   const [info, setInfo] = useState([]); //사용자가 문제 푼 index가 들어잇다
-  const [questions, setQuestions] = useRecoilState([]);
-  const [answers, setAnswers] = useRecoilState([]);
   const [page, setPage] = useState(0);
   const [maxPage, setMaxPage] = useState(7);
   const [getUrl, setGetUrl] = useState();
@@ -24,33 +23,22 @@ export default function SolvePage() {
     questions: [1, 1, 2, 3, 4, 5, 6, 7],
     answers: [1, 2, 3, 4, 5, 6, 7, 8],
   };
-
+  const { uri } = useParams();
+  console.log(uri);
+  const checkGet = async () => {
+    try {
+      const response = await axios.get(
+        `http://27.96.131.106:9998/find-me/${uri}`
+      );
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
+  };
   useEffect(() => {
-    //answer 배열 이 변경될때마다 콘솔에 찍
-    console.log("answers = " + answers);
-  }, [answers]);
+    checkGet();
+  }, []);
 
-  const saveInfo = (index) => {
-    //index 를 받아오고 그걸 answer 배열에 넣겠다.
-    if (answers.length <= maxPage) {
-      setAnswers([...answers, index]);
-      setQuestions([...questions, page]);
-    }
-
-    if (page < maxPage) {
-      setPage(page + 1);
-      setDataIndex(dataIndex + 1);
-    }
-  };
-  console.log(info);
-  const removeLastIndex = () => {
-    setInfo((prevInfo) => {
-      // 배열의 마지막 요소를 삭제한 새로운 배열을 반환
-      const newInfo = [...prevInfo];
-      newInfo.pop();
-      return newInfo;
-    });
-  };
   console.log(randomSubset);
   return (
     <div className={style.backImg}>
@@ -68,7 +56,7 @@ export default function SolvePage() {
             className="leftBtn"
             onClick={(event) => {
               event.preventDefault();
-              removeLastIndex();
+
               if (page > 0) setPage(page - 1);
             }}
           ></button>
@@ -82,7 +70,6 @@ export default function SolvePage() {
               }}
               key={index}
               onClick={() => {
-                saveInfo(index);
                 // 버튼 클릭 시 정답 확인
               }}
             >
