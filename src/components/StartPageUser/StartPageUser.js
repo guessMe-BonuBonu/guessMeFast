@@ -1,12 +1,10 @@
-import style from "./StartPage.module.css";
+import style from "./StartPageUser.module.css";
 import { useNavigate, useParams } from "react-router-dom";
-const StartPage = () => {
+const StartPageUser = () => {
   const navigator = useNavigate();
   const handleButton = () => {
     navigator("/getinfo");
   };
-  const { id } = useParams();
-  //get 요청을 날리면
 
   return (
     <div>
@@ -15,7 +13,7 @@ const StartPage = () => {
       </div>
       <div className={style.bottom}>
         <button onClick={handleButton} className={style.quizButton}>
-          퀴즈 만들기
+          문제 풀러 가기
         </button>
         <div className={style.arrowImg}></div>
       </div>
@@ -23,4 +21,4 @@ const StartPage = () => {
   );
 };
 
-export default StartPage;
+export default StartPageUser;

@@ -94,23 +94,19 @@ export default function QuestionPage() {
       setQuestions([...questions, dataSet[page].id]);
     }
 
-
     if (page === 7) {
-      // check();
+      check();
       setCheckState(true);
     }
 
     if (page < maxPage) {
       setPage(page + 1);
     }
-
   };
 
   useEffect(() => {
-    if (checkState === true)
-      check();
+    if (checkState === true) check();
   }, [checkState]);
-
 
   const check = () => {
     checkPost();
@@ -124,8 +120,6 @@ export default function QuestionPage() {
     questions.pop();
   };
 
-
-
   return (
     <div className={style.backImg}>
       <div className={style.topContainer}>
@@ -134,9 +128,7 @@ export default function QuestionPage() {
       </div>
 
       <div className={style.bottomContainer}>
-        <button onClick={handleBackBtn}>
-          {"<"}
-        </button>
+        <button onClick={handleBackBtn}>{"<"}</button>
         <div>
           {randomSubset[page].ans.map((ans, index) => (
             <button
@@ -149,13 +141,9 @@ export default function QuestionPage() {
             >
               {ans}
             </button>
-
           ))}
         </div>
-
-
       </div>
-
     </div>
   );
 }
