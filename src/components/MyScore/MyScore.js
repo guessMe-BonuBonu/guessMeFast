@@ -19,6 +19,7 @@ export default function MyScore() {
             <button className={style.Btn}>내 퀴즈 만들기</button>
           </div>
         </div>
+        <div className={style.topImg}>efe</div>
       </div>
     </div>
   );

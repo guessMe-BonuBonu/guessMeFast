@@ -13,7 +13,7 @@ export default function QuestionPage() {
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState([]);
   const [page, setPage] = useState(0);
-  const [maxPage, setMaxPage] = useState(7);
+  const [maxPage, setMaxPage] = useState(10);
   const [url, setUrl] = useRecoilState(urlSave);
 
   const [name, setName] = useRecoilState(nameState);
@@ -31,87 +31,48 @@ export default function QuestionPage() {
         questions: questions,
         answers: answers,
       });
+      console.log("q + " + questions);
       console.log(response);
       setUrl(response.data);
       setCheckState(false);
+      navigate("/urlresult");
     } catch (error) {
       console.error(error);
     }
   };
   console.log(url);
 
-  const dataSet = [
-    {
-      id: 2,
-      que: "나의 공강은 몇일",
-      ans: ["1일", "2~3일", "4일", "없음"],
-    },
-    {
-      id: 1,
-      que: "좋아하는 학식 메뉴는?",
-      ans: ["세종대왕돈까스", "육회비빔밥", "소금구이덮밥", "쫑쫑덮밥"],
-    },
-    {
-      id: 3,
-      que: "나의 통학 시간은?",
-      ans: ["~30분", "30분~1시간", "1시간~2시간", "2시간 이상"],
-    },
-    {
-      id: 4,
-      que: "나는 계획형일까 즉흥형일까",
-      ans: ["계획형", "즉흥형"],
-    },
-    {
-      id: 5,
-      que: "좋아하는 영화 취향",
-      ans: ["로맨스", "스릴러/공포", "판타지", "액션/코미디"],
-    },
-    {
-      id: 6,
-      que: "힘들 때 하는 일",
-      ans: ["울기", "술마시기", "친구만나기", "게임하기"],
-    },
-    {
-      id: 7,
-      que: "내 혈액형은",
-      ans: ["A형", "B형", "AB형", "O형"],
-    },
-    {
-      id: 8,
-      que: "내가 좋아하는 계절은",
-      ans: ["봄", "여름", "가을", "겨울"],
-    },
-  ];
   useEffect(() => {
     console.log("answers = " + answers);
+    if (answers.length === maxPage) {
+      checkPost();
+    }
   }, [answers]);
 
   const saveInfo = (index, id) => {
     // const findId = dataSet.findIndex((item) => item.index === page);
 
-    if (answers.length <= maxPage) {
+
+    if (answers.length <= maxPage - 1) {
       setAnswers([...answers, index]);
-      setQuestions([...questions, dataSet[page].id]);
+      setQuestions([...questions, randomSubset[page].id]);
     }
 
-    if (page === 7) {
-      check();
+    if (page === maxPage) {
       setCheckState(true);
+      // check();
     }
 
-    if (page < maxPage) {
+    if (page < maxPage - 1) {
       setPage(page + 1);
     }
   };
 
   useEffect(() => {
-    if (checkState === true) check();
+    if (checkState === true) checkPost();
   }, [checkState]);
 
-  const check = () => {
-    checkPost();
-    navigate("/urlresult");
-  };
+
 
   const handleBackBtn = (e) => {
     e.preventDefault();
@@ -119,7 +80,7 @@ export default function QuestionPage() {
     answers.pop();
     questions.pop();
   };
-
+  ////
   return (
     <div className={style.backImg}>
       <div className={style.topContainer}>

@@ -12,7 +12,8 @@ import {
   // Route,
   // Link,
 } from "react-router-dom";
-import SolvePage from "./components/SolveQuestionPage.js/SolveQuestionPage";
+
+import SolvePage from "./components/SolveQuestionPage/SolveQuestionPage";
 import GetInfo from "./components/GetInfo/GetInfo";
 import StartPageUser from "./components/StartPageUser/StartPageUser";
 const router = createBrowserRouter([
@@ -41,12 +42,13 @@ const router = createBrowserRouter([
   },
   {
     path: "/getinfo",
-    element: <GetInfo />,
+    element: <GetInfo />
   },
   {
-    path: "/score", //uri를 받아와서
-    element: <MyScore />,
+    path: "/score",
+    element: <MyScore />
   },
+
 ]);
 createRoot(document.getElementById("root")).render(
   <RecoilRoot>

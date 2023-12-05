@@ -24,6 +24,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "homepage": "https://guessme-bonubonu.github.io/guessMeFast/",
   "eslintConfig": {
     "extends": [
       "react-app",
