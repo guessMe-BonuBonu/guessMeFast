@@ -91,3 +91,5 @@ const getRandomSubset = (array, count) => {
 
 // 사용 예시
 export const randomSubset = getRandomSubset(dataSet, 10);
+
+//axios
