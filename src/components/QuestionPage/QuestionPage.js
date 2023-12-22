@@ -80,7 +80,7 @@ export default function QuestionPage() {
     answers.pop();
     questions.pop();
   };
-  ////
+
   return (
     <div className={style.backImg}>
       <div className={style.topContainer}>
