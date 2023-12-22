@@ -1,8 +1,14 @@
-@font-face{
+@font-face {
     font-family: "Jalnan";
-    src:url("../font/Jalnan.ttf") format("truetype");
+    src: url("../font/Jalnan.ttf") format("truetype");
 }
-@font-face{
+
+@font-face {
     font-family: "ChangwonDangamAsacs";
-    src:url("../font/ChangwonDangamAsac-Bold.ttf") format("truetype");
+    src: url("../font/ChangwonDangamAsac-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "EastSeaDokdo";
+    src: url("../font/EastSeaDokdo-Regular.ttf") format("truetype");
 }

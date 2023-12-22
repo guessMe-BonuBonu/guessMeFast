@@ -1,3 +1,7 @@
+.borderContainer {
+  background-color: white;
+}
+
 .Container {
   display: flex;
   width: 100vw;
@@ -5,43 +9,106 @@
   background-color: #f7c9c9;
   justify-content: center;
   align-items: center;
+  border-radius: 0 0 400px 0;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
 }
 
 .ScoreBoard {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80vw;
+  flex-direction: column;
+  width: 55vw;
   height: 80vh;
-  position: relative;
+  background-color: white;
+
 }
 
 .Top {
-  background-color: white;
-  width: 70%;
-  height: 70%;
+  margin-bottom: 4vh;
+  margin-top: 7vh;
+}
+
+.YouAndMe {
+  font-size: 5vh;
+  font-family: "ChangwonDangamAsac";
+}
+
+.Middle {
+  margin-bottom: 12vh;
+  margin-top: 7vh;
+}
+
+.ScoreDiv {
+
+  font-size: 11vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "ChangwonDangamAsac";
+  background-image: url("../../img/circleImg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 70vh;
+  height: 25vh;
+
+}
+
+.Bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  /* padding: 20px; */
 }
 
-.topImg {
-  width: 70%;
-  height: 70%;
-  background-image: url("../../img/solveScoreBorderImg.png");
+
+
+.scoreBtn {
+  text-decoration: underline;
+  border: none;
+  background-color: white;
+  margin-bottom: 3vh;
+  font-size: 1.5vh;
+  font-weight: 700;
+  font-family: "Jalnan";
+}
+
+.makeBtnBox {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  /* margin-left: 5vw; */
+  position: relative;
+}
+
+.img1 {
+  width: 7vh;
+  height: 7vh;
+  background-image: url("../../img/questionMarkImg.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+  z-index: 2;
+  position: relative;
+  bottom: 5vh;
+  left: 2vh;
+  margin-left: 4vh;
 }
 
-.semiTop {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  justify-content: center;
+.img2 {
+  width: 12vh;
+  height: 12vh;
+  background-image: url("../../img/arrowImg3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transform: rotate(-10deg);
+  position: relative;
+  bottom: 1.5vh;
+  right: 2vh;
+
 }
 
 .BtnDiv {
@@ -56,9 +123,9 @@
   justify-content: center;
   align-items: center;
   background-color: #96a9d1;
-  width: 360px;
+  width: 30vh;
   border-radius: 90px;
-  height: 97px;
+  height: 7vh;
   margin-bottom: 3vh;
   box-shadow: 2px 2px 2px 2px gray;
   border: none;
@@ -67,53 +134,18 @@
   color: white;
   text-shadow: 2px 4px 2px gray;
   font-family: "Jalnan";
+  z-index: 1;
+
 }
 
-.ScoreDiv {
-  font-size: 100px;
-  display: flex;
-  justify-content: center;
-}
 
-.YouAndMe {
-  margin-left: 20px;
-  font-size: 55px;
-}
 
 .score {
   margin-right: 20px;
   font-size: 80px;
 }
 
-.bottom {
-  text-align: center;
-  /* display:flex; */
-}
 
-.quizButton {
-  width: 20vw;
-  height: 10vh;
-  background-color: #96a9d1;
-  border-radius: 50px;
-  margin-top: 10vh;
-  font-size: 30px;
-  color: white;
-  border: none;
-  text-shadow: 0 3px 4px rgba(0, 0, 0, 0.8);
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-  font-weight: bold;
-  position: fixed;
-  justify-content: center;
-  align-items: center;
-  bottom: 12vh;
-  right: 40vw;
-}
-
-.quizButton:hover {
-  background-color: #8c9bbd;
-  cursor: pointer;
-  border: none;
-}
 
 .box1 {
   width: 50vw;
@@ -129,12 +161,10 @@
   display: inline-block;
   width: 30vh;
   height: 30vh;
-  /* background-color: red; */
   background-image: url("../../img/arrowImg.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  position: fixed;
   bottom: 5vh;
   right: 25vw;
 }
