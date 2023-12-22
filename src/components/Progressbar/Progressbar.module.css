@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
 }
+
 /* .name{
     width:70vw;
     height:20vh;
@@ -22,6 +23,7 @@
   background-position: center center;
   /* border:none; */
 }
+
 .progress2 {
   width: 70vw;
   height: 20vh;
@@ -30,6 +32,7 @@
   background-size: contain;
   background-position: center center;
 }
+
 .progress3 {
   width: 70vw;
   height: 20vh;
@@ -38,6 +41,7 @@
   background-size: contain;
   background-position: center center;
 }
+
 .progress4 {
   width: 70vw;
   height: 20vh;
@@ -46,6 +50,7 @@
   background-size: contain;
   background-position: center center;
 }
+
 .progress5 {
   width: 70vw;
   height: 20vh;
@@ -54,6 +59,7 @@
   background-size: contain;
   background-position: center center;
 }
+
 .progress6 {
   width: 70vw;
   height: 20vh;
@@ -62,6 +68,7 @@
   background-size: contain;
   background-position: center center;
 }
+
 .progress7 {
   width: 70vw;
   height: 20vh;
@@ -70,10 +77,29 @@
   background-size: contain;
   background-position: center center;
 }
+
 .progress8 {
   width: 70vw;
   height: 20vh;
   background-image: url("../../img/progress8.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.progress9 {
+  width: 70vw;
+  height: 20vh;
+  background-image: url("../../img/progress9.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.progress10 {
+  width: 70vw;
+  height: 20vh;
+  background-image: url("../../img/progress10.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
@@ -90,6 +116,7 @@
     align-items: center;
     justify-content: center;
   }
+
   .progress1 {
     width: 70vw;
     height: 20vh;
@@ -98,6 +125,7 @@
     background-size: contain;
     background-position: center;
   }
+
   .progress2 {
     width: 70vw;
     height: 20vh;
@@ -106,6 +134,7 @@
     background-size: contain;
     background-position: center center;
   }
+
   .progress3 {
     width: 70vw;
     height: 20vh;
@@ -114,6 +143,7 @@
     background-size: contain;
     background-position: center center;
   }
+
   .progress4 {
     width: 70vw;
     height: 20vh;
@@ -122,6 +152,7 @@
     background-size: contain;
     background-position: center center;
   }
+
   .progress5 {
     width: 70vw;
     height: 20vh;
@@ -130,6 +161,7 @@
     background-size: contain;
     background-position: center center;
   }
+
   .progress6 {
     width: 70vw;
     height: 20vh;
@@ -138,6 +170,7 @@
     background-size: contain;
     background-position: center center;
   }
+
   .progress7 {
     width: 70vw;
     height: 20vh;
@@ -146,10 +179,29 @@
     background-size: contain;
     background-position: center center;
   }
+
   .progress8 {
     width: 70vw;
     height: 20vh;
     background-image: url("../../img/progress8.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+
+  .progress9 {
+    width: 70vw;
+    height: 20vh;
+    background-image: url("../../img/progress9.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+
+  .progress10 {
+    width: 70vw;
+    height: 20vh;
+    background-image: url("../../img/progress10.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
