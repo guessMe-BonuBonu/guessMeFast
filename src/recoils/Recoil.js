@@ -22,3 +22,10 @@ export const answerState = atom({
   key: "answerState",
   default: [],
 });
+
+export const myScore = atom({
+  key: "myScore",
+  default: "",
+});
+
+

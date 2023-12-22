@@ -3,6 +3,7 @@
   height: 100vh;
   width: 100vw;
 }
+
 /* .selectBtn{
   background-color: red;
 } */
@@ -10,6 +11,7 @@
   font-family: "ChangwonDangamAsac";
   font-size: 7vh;
 }
+
 .selectBtn {
   background-color: #8c9bbd;
   display: flex;
@@ -28,6 +30,7 @@
   text-shadow: 2px 4px 2px gray;
   font-family: "Jalnan";
 }
+
 .selectBtn:hover {
   background-color: #8c9bbd;
   cursor: pointer;
@@ -48,6 +51,7 @@
   /* text-align: center; */
   position: fixed;
 }
+
 .topContainer {
   height: 40vh;
   display: flex;
@@ -57,12 +61,15 @@
   /* position:fixed; */
 }
 
+
+
 @media (max-width: 800px) {
   .backImg {
     background-color: #f7c9c9;
     height: 100vh;
     width: 100vw;
   }
+
   /* .selectBtn{
   background-color: red;
 } */
@@ -70,6 +77,7 @@
     font-family: "ChangwonDangamAsac";
     font-size: 10vw;
   }
+
   .selectBtn {
     background-color: #8c9bbd;
     display: flex;
@@ -88,6 +96,7 @@
     text-shadow: 2px 4px 2px gray;
     font-family: "Jalnan";
   }
+
   .selectBtn:hover {
     background-color: #8c9bbd;
     cursor: pointer;
@@ -108,6 +117,7 @@
     /* text-align: center; */
     position: fixed;
   }
+
   .topContainer {
     height: 40vh;
     display: flex;
