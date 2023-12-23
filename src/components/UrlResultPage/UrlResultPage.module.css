@@ -62,19 +62,16 @@
 }
 
 .fontDiv {
-    font-family: "ChangwonDangamAsac";
+    font-family: "Single Day";
     font-size: 6vh;
 }
 
 .urlDiv {
-    /* background-color: #c2c1c1; */
     height: 5vh;
-    /* width:50vw; */
     display: flex;
     text-align: center;
     justify-content: center;
     margin-top: 1.5vh;
-
 }
 
 .urlP {
@@ -87,10 +84,11 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    font-size: 1.5vh;
 }
 
 .fontDiv2 {
-    font-family: "ChangwonDangamAsac";
+    font-family: "Single Day";
     font-size: 2.5vh;
     display: flex;
     justify-content: center;
@@ -106,12 +104,10 @@
     font-family: "Jalnan";
     background-color: #96A9D1;
     border: none;
-    /* position: fixed; */
     bottom: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .copyBtn:hover {

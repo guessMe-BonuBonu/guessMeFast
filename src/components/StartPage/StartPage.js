@@ -14,10 +14,13 @@ const StartPage = () => {
         <div className={style.box1}></div>
       </div>
       <div className={style.bottom}>
-        <button onClick={handleButton} className={style.quizButton}>
-          퀴즈 만들기
-        </button>
-        <div className={style.arrowImg}></div>
+        <div className={style.arrowBox}>
+          <button onClick={handleButton} className={style.quizButton}>
+            퀴즈 만들기
+          </button>
+          <div className={style.arrowImg}></div>
+        </div>
+
       </div>
     </div>
   );

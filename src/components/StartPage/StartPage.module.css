@@ -1,3 +1,4 @@
+/*데스크톱 버전*/
 @media(min-width:768px) {
   .top {
     width: 100vw;
@@ -9,12 +10,32 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: fixed;
   }
 
   .bottom {
     text-align: center;
-    /* display:flex; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .arrowBox {
+    margin-left: 10vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .arrowBox {
+    margin-left: 10vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
   }
 
   .quizButton {
@@ -29,11 +50,8 @@
     text-shadow: 0 3px 4px rgba(0, 0, 0, 0.8);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
     font-weight: bold;
-    position: fixed;
     justify-content: center;
     align-items: center;
-    bottom: 12vh;
-    right: 40vw;
   }
 
   .quizButton:hover {
@@ -53,19 +71,20 @@
   }
 
   .arrowImg {
-    display: inline-block;
-    width: 30vh;
-    height: 30vh;
-    /* background-color: red; */
+    width: 20vh;
+    height: 23vh;
+    position: relative;
+    left: 1vh;
+    top: 3vh;
     background-image: url("../../img/arrowImg.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    position: fixed;
-    bottom: 5vh;
-    right: 25vw;
+    /* background-color: red; */
   }
 }
+
+/*모바일 버전*/
 
 @media (max-width:768px) {
   .top {
@@ -78,13 +97,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: fixed;
   }
 
   .bottom {
     text-align: center;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .arrowBox {
+    margin-left: 10vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
   }
 
   .quizButton {
@@ -99,8 +128,6 @@
     text-shadow: 0 3px 4px rgba(0, 0, 0, 0.8);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
     font-weight: bold;
-    position: fixed;
-    bottom: 12vh;
   }
 
   .quizButton:hover {
@@ -120,16 +147,15 @@
   }
 
   .arrowImg {
-    display: flex;
-    justify-content: center;
-    width: 20vh;
-    height: 30vh;
+    width: 23vw;
+    height: 30vw;
+    position: relative;
+    left: 1vh;
+    top: 3vh;
     background-image: url("../../img/arrowImg.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    position: fixed;
-    bottom: 3vh;
-    margin-left: 60%;
+    /* background-color: red; */
   }
 }
