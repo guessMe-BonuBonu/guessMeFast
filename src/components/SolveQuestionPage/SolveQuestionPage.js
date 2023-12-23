@@ -4,17 +4,22 @@ import style from "./SolveQuestionPage.module.css";
 import axios from "axios";
 import Progressbar from "../Progressbar/Progressbar";
 import { useRecoilState } from "recoil";
-import { urlSave } from "../../recoils/Recoil";
-import { useRecoilValue } from "recoil";
 import { dataSet, randomSubset } from "../Data";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { checkGet } from "../Data";
+import { myScore } from "../../recoils/Recoil";
+import { useNavigate } from "react-router-dom";
 export default function SolvePage() {
   const [page, setPage] = useState(0);
-  const [maxPage, setMaxPage] = useState(7);
+  const [maxPage, setMaxPage] = useState(10);
   const [answers, setAnswers] = useState([]);
   const [finalArr, setFinalArr] = useState([]);
+  const [score, setScore] = useRecoilState(myScore);
+  const navigate = useNavigate();
+  const [checkState, setCheckState] = useState(false);
+  const [scoreCheck, setScoreCheck] = useState(false);
+  const [cnt, setCnt] = useState(0);
+
   const getData = {
     //실제 서버에서 받는 mockData
     name: "hee",
@@ -24,12 +29,15 @@ export default function SolvePage() {
   const { uri } = useParams();
 
   const saveInfo = (index) => {
-    const findId = dataSet.findIndex((item) => item.index === page);
+    // const findId = dataSet.findIndex((item) => item.index === page);
 
     if (answers.length <= maxPage - 1) {
       setAnswers([...answers, index]);
     }
 
+    if (page === maxPage - 1) {
+      setCheckState(true);
+    }
     if (page < maxPage - 1) {
       setPage(page + 1);
     }
@@ -52,16 +60,38 @@ export default function SolvePage() {
   useEffect(() => {
     checkGet();
   }, []);
-  console.log(page);
-  console.log(finalArr.questions);
+
+
+  useEffect(() => {
+    if (checkState === true) {
+      console.log("만든사람 answer :" + finalArr.answers);
+      console.log("맞춘사람 answer : " + answers);
+      for (let i = 0; i < finalArr.answers.length; i++) {
+        if (finalArr.answers[i] === answers[i]) {
+          setCnt(prevCnt => prevCnt + 1);
+        }
+        if (finalArr.answers.length - 1 === i) {
+          setScoreCheck(true);
+          setCheckState(false);
+        }
+      }
+
+    }
+  }, [checkState]);
+
+  useEffect(() => {
+    setScore(cnt);
+  }, [cnt]);
+  useEffect(() => {
+    if (scoreCheck === true) {
+      navigate("/score");
+    }
+  }, [scoreCheck]);
+
   const A = finalArr?.questions || [];
-  console.log(A);
-  console.log(A.length);
-  console.log(A[page]);
+
   const arrIndex = A[page] - 1 || 0;
-  // for (let i = 0; i < A.length; i++) {
-  //   console.log(A[i]);
-  // }
+
   return (
     <div className={style.backImg}>
       <div className={style.topContainer}>
@@ -100,11 +130,6 @@ export default function SolvePage() {
               </button>
             ))}
         </div>
-        {page === 7 && (
-          <Link to="/solve">
-            <button>확인</button>
-          </Link>
-        )}
       </div>
     </div>
   );
