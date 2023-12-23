@@ -24,7 +24,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://guessme-bonubonu.github.io/guessMeFast/",
+  "homepage": "https://guessme-bonubonu.github.io/",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -43,5 +43,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://guessme-bonubonu.github.io/guessMeFast/"
+  "homepage": "https://guessme-bonubonu.github.io/"
 }

@@ -31,7 +31,7 @@
 
 .YouAndMe {
   font-size: 5vh;
-  font-family: "ChangwonDangamAsac";
+  font-family: "Single Day";
 }
 
 .Middle {
@@ -41,11 +41,11 @@
 
 .ScoreDiv {
 
-  font-size: 11vh;
+  font-size: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "ChangwonDangamAsac";
+  font-family: "Permanent Marker";
   background-image: url("../../img/circleImg.png");
   background-size: contain;
   background-repeat: no-repeat;
