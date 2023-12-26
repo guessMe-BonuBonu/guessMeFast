@@ -16,7 +16,7 @@ const UrlResultPage = () => {
   const handleCopyClipBoard = async (text) => {
     if (urlSave !== "") {
       try {
-        await navigator.clipboard.writeText(text);
+        await navigator.clipboard.writeText("solve/" + text);
         alert("클립보드에 링크가 복사되었어요.");
       } catch (err) {
         console.log(err);
@@ -62,6 +62,7 @@ const UrlResultPage = () => {
               친구에게 공유해 우정을 테스트 하세요
             </p>
             <div style={{ display: "flex", justifyContent: "center" }}>
+              <div className={style.arrow2Img}></div>
               <button
                 className={style.copyBtn}
                 onClick={() => handleCopyClipBoard(`${url}`)}
@@ -69,10 +70,11 @@ const UrlResultPage = () => {
                 URL 링크 복사
               </button>
             </div>
-            <img
+
+            {/* <img
               src={arrowing2}
               style={{ width: "7vw", position: "fixed", marginLeft: "18%" }}
-            />
+            /> */}
           </div>
         </div>
       </div>

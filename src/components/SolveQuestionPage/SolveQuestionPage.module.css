@@ -3,13 +3,15 @@
   height: 100vh;
   width: 100vw;
 }
+
 /* .selectBtn{
     background-color: red;
   } */
 .queDiv {
-  font-family: "ChangwonDangamAsac";
+  font-family: "Single Day";
   font-size: 7vh;
 }
+
 .selectBtn {
   background-color: #8c9bbd;
   display: flex;
@@ -30,6 +32,7 @@
   position: relative;
   right: 2vw;
 }
+
 .selectBtn:hover {
   background-color: #8c9bbd;
   cursor: pointer;
@@ -50,6 +53,7 @@
   align-items: center;
   position: fixed;
 }
+
 .leftBar button {
   background-color: white;
   border: none;
@@ -62,11 +66,13 @@
   position: relative;
   right: 80px;
 }
+
 .leftBar {
   display: flex;
   position: relative;
   justify-content: center;
 }
+
 .topContainer {
   height: 40vh;
   display: flex;
@@ -81,13 +87,15 @@
     height: 100vh;
     width: 100vw;
   }
+
   /* .selectBtn{
     background-color: red;
   } */
   .queDiv {
-    font-family: "ChangwonDangamAsac";
+    font-family: "Single Day";
     font-size: 10vw;
   }
+
   .selectBtn {
     background-color: #8c9bbd;
     display: flex;
@@ -106,6 +114,7 @@
     text-shadow: 2px 4px 2px gray;
     font-family: "Jalnan";
   }
+
   .selectBtn:hover {
     background-color: #8c9bbd;
     cursor: pointer;
@@ -124,6 +133,7 @@
     flex-direction: column;
     position: fixed;
   }
+
   .topContainer {
     height: 40vh;
     display: flex;

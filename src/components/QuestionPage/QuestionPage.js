@@ -25,20 +25,23 @@ export default function QuestionPage() {
   const checkPost = async () => {
     console.log("answers : " + answers);
     console.log("question : " + questions);
-    try {
-      const response = await axios.post("http://27.96.131.106:9998/make-me", {
-        name: name /*api 양식*/,
-        questions: questions,
-        answers: answers,
-      });
-      console.log("q + " + questions);
-      console.log(response);
-      setUrl(response.data);
-      setCheckState(false);
-      navigate("/urlresult");
-    } catch (error) {
-      console.error(error);
+    if (answers.length === 10) {
+      try {
+        const response = await axios.post("http://27.96.131.106:9998/make-me", {
+          name: name /*api 양식*/,
+          questions: questions,
+          answers: answers,
+        });
+        console.log("q + " + questions);
+        console.log(response);
+        setUrl(response.data);
+        setCheckState(false);
+        navigate("/urlresult");
+      } catch (error) {
+        console.error(error);
+      }
     }
+
   };
   console.log(url);
 
