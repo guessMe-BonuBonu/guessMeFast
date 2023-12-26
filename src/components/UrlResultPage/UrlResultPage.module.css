@@ -30,10 +30,11 @@
 }
 
 .tagImg {
-    width: 18vh;
-    height: 20vh;
+    width: 15vh;
+    height: 18vh;
     position: relative;
     /* top:8vh; */
+    bottom: 3vh;
     z-index: 10;
 }
 
@@ -43,7 +44,8 @@
     text-align: center;
     flex-direction: column;
     height: 30vh;
-    /* margin-top:12vh; */
+
+
 }
 
 .bottomContainer {
@@ -52,13 +54,8 @@
     text-align: center;
     flex-direction: column;
     /* height:30vh; */
-    margin-top: 10vh;
-}
-
-.arrowing2 {
-    width: 7vw;
-    z-index: 1;
-    margin-right: 30%;
+    margin-top: -2vh;
+    margin-bottom: 2vh;
 }
 
 .fontDiv {
@@ -92,6 +89,28 @@
     font-size: 2.5vh;
     display: flex;
     justify-content: center;
+    position: relative;
+    top: 5vh;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15vh;
+}
+
+.arrow2Img {
+    width: 15vh;
+    height: 18vh;
+    /* background-color: red; */
+    background-image: url("../../img/arrowImg2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    bottom: 2vh;
 }
 
 .copyBtn {

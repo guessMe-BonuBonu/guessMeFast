@@ -8,8 +8,16 @@ export const urlGet = atom({
   key: "urlGet",
   default: "",
 });
+export const SolveUrl = atom({
+  key: "SolveUrl",
+  default: "",
+});
 export const nameState = atom({
   key: "nameState",
+  default: "",
+});
+export const solveNameState = atom({
+  key: "solveNameState",
   default: "",
 });
 
