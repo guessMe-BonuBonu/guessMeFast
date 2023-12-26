@@ -19,6 +19,8 @@ export default function SolvePage() {
   const [checkState, setCheckState] = useState(false);
   const [scoreCheck, setScoreCheck] = useState(false);
   const [cnt, setCnt] = useState(0);
+  // const [nameInputFlag, setnameInputFlag] = useState(true);
+
 
   const getData = {
     //실제 서버에서 받는 mockData
@@ -27,6 +29,10 @@ export default function SolvePage() {
     answers: [1, 2, 3, 4, 5, 6, 7, 8],
   };
   const { uri } = useParams();
+
+  // const isMobile = useMediaQuery({
+  //   query: "(max-width:768px)",
+  // });
 
   const saveInfo = (index) => {
     // const findId = dataSet.findIndex((item) => item.index === page);

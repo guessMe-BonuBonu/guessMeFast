@@ -88,12 +88,20 @@ export default function QuestionPage() {
     <div className={style.backImg}>
       <div className={style.topContainer}>
         <Progressbar page={page} />
-        <div className={style.queDiv}>"{randomSubset[page].que}"</div>
+        <div className={style.queContainer}>
+          <div className={style.quotesImg1}></div>
+          <div className={style.queDiv}>"{randomSubset[page].que}"</div>
+          <div className={style.quotesImg2}></div>
+        </div>
+
       </div>
 
       <div className={style.bottomContainer}>
-        <button onClick={handleBackBtn}>{"<"}</button>
-        <div>
+        <div className={style.leftBar}>
+          <button onClick={handleBackBtn}></button>
+        </div>
+
+        <div className={style.BtnsContainer}>
           {randomSubset[page].ans.map((ans, index) => (
             <button
               className={style.selectBtn}

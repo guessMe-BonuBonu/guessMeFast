@@ -15,6 +15,7 @@ import {
 
 import SolvePage from "./components/SolveQuestionPage/SolveQuestionPage";
 import GetInfo from "./components/GetInfo/GetInfo";
+import SolveGetInfo from "./components/SolveGetInfo/SolveGetInfo";
 import StartPageUser from "./components/StartPageUser/StartPageUser";
 const router = createBrowserRouter([
   //시작페이지
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
   {
     path: "/solve/:uri",
     element: <SolvePage />,
+  },
+  {
+    path: "/solveGetInfo/:uri",
+    element: <SolveGetInfo />,
   },
   {
     path: "/getinfo",

@@ -29,14 +29,6 @@
     flex-direction: row;
   }
 
-  .arrowBox {
-    margin-left: 10vw;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
 
   .quizButton {
     width: 20vw;
@@ -89,7 +81,7 @@
 @media (max-width:768px) {
   .top {
     width: 100vw;
-    height: 70vh;
+    height: 65vh;
     background-color: #f7c9c9;
     border-radius: 0 0 100px 0;
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
@@ -108,7 +100,7 @@
   }
 
   .arrowBox {
-    margin-left: 10vw;
+    margin-left: 20vw;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -137,9 +129,9 @@
   }
 
   .box1 {
-    width: 90vw;
-    height: 50vh;
-    background-image: url("../../img/startImg.png");
+    width: 80vw;
+    height: 40vh;
+    background-image: url("../../img/mobileStartImg.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
