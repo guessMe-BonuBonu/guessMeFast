@@ -98,27 +98,36 @@ export default function SolvePage() {
 
   const arrIndex = A[page] - 1 || 0;
 
+
+  // <div className={style.queDiv}>
+  // {A && dataSet[arrIndex].que}
+  // {/*처음엔 index 0이니까 dataSet[0]일거야 그 담엔 dataIndex 증가하면서 쭉쭉 받아오는 데이터마다 달라짐*/}
+  //</div> 
+
+
+  const handleBackBtn = (e) => {
+    e.preventDefault();
+    if (page > 0) setPage(page - 1);
+    answers.pop();
+  };
+
   return (
     <div className={style.backImg}>
       <div className={style.topContainer}>
         <Progressbar page={page} />
-        <div className={style.queDiv}>
-          {A && dataSet[arrIndex].que}
-          {/*처음엔 index 0이니까 dataSet[0]일거야 그 담엔 dataIndex 증가하면서 쭉쭉 받아오는 데이터마다 달라짐*/}
+        <div className={style.queContainer}>
+          <div className={style.quotesImg1}></div>
+          <div className={style.queDiv}>"{A && dataSet[arrIndex].que}"</div>
+          <div className={style.quotesImg2}></div>
         </div>
+
       </div>
 
       <div className={style.bottomContainer}>
         <div className={style.leftBar}>
-          <button
-            className="leftBtn"
-            onClick={(event) => {
-              event.preventDefault();
-              if (page > 0) setPage(page - 1);
-            }}
-          ></button>
+          <button onClick={handleBackBtn}></button>
         </div>
-        <div>
+        <div className={style.BtnsContainer}>
           {A &&
             dataSet[arrIndex].ans.map((ans, index) => (
               <button

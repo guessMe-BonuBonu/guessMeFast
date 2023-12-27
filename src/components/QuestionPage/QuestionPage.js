@@ -15,19 +15,16 @@ export default function QuestionPage() {
   const [page, setPage] = useState(0);
   const [maxPage, setMaxPage] = useState(10);
   const [url, setUrl] = useRecoilState(urlSave);
-
   const [name, setName] = useRecoilState(nameState);
-
   const [checkState, setCheckState] = useState(false);
-
   const navigate = useNavigate();
-
   const checkPost = async () => {
     console.log("answers : " + answers);
     console.log("question : " + questions);
+
     if (answers.length === 10) {
       try {
-        const response = await axios.post("http://27.96.131.106:9998/make-me", {
+        const response = await axios.post("https://bono-api.kro.kr:9998", {
           name: name /*api 양식*/,
           questions: questions,
           answers: answers,
@@ -100,7 +97,6 @@ export default function QuestionPage() {
         <div className={style.leftBar}>
           <button onClick={handleBackBtn}></button>
         </div>
-
         <div className={style.BtnsContainer}>
           {randomSubset[page].ans.map((ans, index) => (
             <button

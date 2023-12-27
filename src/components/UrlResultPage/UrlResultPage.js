@@ -12,7 +12,6 @@ const UrlResultPage = () => {
 
   const url = useRecoilValue(urlSave);
 
-  // console.log("urlname : "+name);
   const handleCopyClipBoard = async (text) => {
     if (urlSave !== "") {
       try {
