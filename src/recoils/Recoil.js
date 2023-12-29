@@ -17,10 +17,9 @@ export const nameState = atom({
   default: "",
 });
 export const solveNameState = atom({
-  key: "solveNameState",
+  key: "userNameState",
   default: "",
 });
-
 export const questionState = atom({
   key: "questionState",
   default: [],
@@ -35,5 +34,3 @@ export const myScore = atom({
   key: "myScore",
   default: "",
 });
-
-

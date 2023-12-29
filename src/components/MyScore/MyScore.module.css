@@ -1,5 +1,5 @@
 /* 데스크탑 */
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .borderContainer {
     background-color: white;
   }
@@ -23,22 +23,6 @@
     width: 55vw;
     height: 80vh;
     background-color: white;
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
-    position: relative;
-  }
-
-  .line {
-    width: 80vw;
-    height: 95vh;
-    background-color: transparent;
-    position: absolute;
-    left: 50vw-(55vw/2);
-    top: 50vh-(80vh/2);
-    background-image: url("../../img/solveScoreBorderImg.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: 10;
   }
 
   .Top {
@@ -57,6 +41,7 @@
   }
 
   .ScoreDiv {
+    font-size: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,12 +52,6 @@
     background-position: center center;
     width: 70vh;
     height: 25vh;
-
-  }
-
-  .scoreContent {
-    font-size: 10vh;
-    margin-bottom: 2vh;
   }
 
   .Bottom {
@@ -100,274 +79,100 @@
     /* margin-left: 5vw; */
     position: relative;
   }
-
-  .img1 {
-    width: 7vh;
-    height: 7vh;
-    background-image: url("../../img/questionMarkImg.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: 2;
-    position: relative;
-    bottom: 5vh;
-    left: 2vh;
-    margin-left: 4vh;
+  .makeBtnBox a {
+    outline: none;
+    text-decoration: none;
+    color: black;
   }
-
-  .img2 {
-    width: 12vh;
-    height: 12vh;
-    background-image: url("../../img/arrowImg3.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    transform: rotate(-10deg);
-    position: relative;
-    bottom: 1.5vh;
-    right: 2vh;
-
+  .makeBtnBox a :hover {
+    background-color: #f7c9c9;
+    transition: all 0.4s;
   }
-
-  .BtnDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .Btn {
-    background-color: #8c9bbd;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #96a9d1;
-    width: 30vh;
-    border-radius: 90px;
-    height: 7vh;
-    margin-bottom: 3vh;
-    box-shadow: 2px 2px 2px 2px gray;
-    border: none;
-    font-size: 3vh;
-    font-weight: 700;
-    color: white;
-    text-shadow: 2px 4px 2px gray;
-    font-family: "Jalnan";
-    z-index: 1;
-
-  }
-
-  .score {
-    margin-right: 20px;
-    font-size: 80px;
-  }
-
-  .box1 {
-    width: 50vw;
-    height: 50vh;
-    background-image: url("../../img/startImg.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    margin-top: 10vh;
-  }
-
-  .arrowImg {
-    display: inline-block;
-    width: 30vh;
-    height: 30vh;
-    background-image: url("../../img/arrowImg.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    bottom: 5vh;
-    right: 25vw;
-  }
-
-
 }
 
+.img2 {
+  width: 12vh;
+  height: 12vh;
+  background-image: url("../../img/arrowImg3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transform: rotate(-10deg);
+  position: relative;
+  bottom: 1.5vh;
+  right: 2vh;
+}
 
-/* 모바일 */
-@media (max-width:768px) {
-  .borderContainer {
-    background-color: white;
-  }
+.score {
+  margin-right: 20px;
+  font-size: 80px;
+}
 
-  .Container {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    background-color: #f7c9c9;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0 0 200px 0;
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
-  }
+.box1 {
+  width: 50vw;
+  height: 50vh;
+  background-image: url("../../img/startImg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-top: 10vh;
+}
 
-  .ScoreBoard {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 80vw;
-    height: 50vh;
-    background-color: white;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
-  }
+.arrowImg {
+  display: inline-block;
+  width: 30vh;
+  height: 30vh;
+  background-image: url("../../img/arrowImg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  bottom: 5vh;
+  right: 25vw;
+}
 
-  .line {
-    width: 90vw;
-    height: 65vh;
-    background-color: transparent;
-    position: absolute;
-    left: 50vw-(80vw/2);
-    top: 50vh-(50vh/2);
-    background-image: url("../../img/mobileSolveScoreBorderImg.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: 10;
-  }
+.Btn {
+  background-color: #8c9bbd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #96a9d1;
+  width: 30vh;
+  border-radius: 90px;
+  height: 7vh;
+  margin-bottom: 3vh;
+  box-shadow: 2px 2px 2px 2px gray;
+  border: none;
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 4px 2px gray;
+  font-family: "Jalnan";
+  z-index: 1;
+}
 
-  .Top {
-    margin-bottom: 4vh;
-    margin-top: 7vh;
-  }
+.score {
+  margin-right: 20px;
+  font-size: 80px;
+}
 
-  .YouAndMe {
-    font-size: 4vh;
-    font-family: "Single Day";
-  }
+.box1 {
+  width: 50vw;
+  height: 50vh;
+  background-image: url("../../img/startImg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-top: 10vh;
+}
 
-  .Middle {
-    /* margin-bottom: 2vh;
-    margin-top: 2vh; */
-  }
-
-  .ScoreDiv {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Permanent Marker";
-    background-image: url("../../img/circleImg.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 65vw;
-    height: 20vh;
-
-  }
-
-  .scoreContent {
-    font-size: 8vh;
-    margin-bottom: 2vh;
-  }
-
-  .Bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .scoreBtn {
-    text-decoration: underline;
-    border: none;
-    background-color: white;
-    margin-bottom: 1vh;
-    font-size: 1.5vh;
-    font-weight: 700;
-    font-family: "Jalnan";
-  }
-
-  .makeBtnBox {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    position: relative;
-  }
-
-  .img1 {
-    width: 7vh;
-    height: 7vh;
-    background-image: url("../../img/questionMarkImg.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: 2;
-    position: relative;
-    bottom: 5vh;
-    left: 2vh;
-    margin-left: 4vh;
-  }
-
-  .img2 {
-    width: 12vh;
-    height: 12vh;
-    background-image: url("../../img/arrowImg3.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    transform: rotate(-10deg);
-    position: relative;
-    bottom: 1.5vh;
-    right: 2vh;
-
-  }
-
-  .BtnDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .Btn {
-    background-color: #8c9bbd;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #96a9d1;
-    width: 40vw;
-    border-radius: 90px;
-    height: 6vh;
-    margin-bottom: 3vh;
-    box-shadow: 2px 2px 2px 2px gray;
-    border: none;
-    font-size: 2.5vh;
-    font-weight: 700;
-    color: white;
-    text-shadow: 2px 4px 2px gray;
-    font-family: "Jalnan";
-    z-index: 1;
-
-  }
-
-  .score {
-    margin-right: 20px;
-    font-size: 80px;
-  }
-
-  .box1 {
-    width: 50vw;
-    height: 50vh;
-    background-image: url("../../img/startImg.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    margin-top: 10vh;
-  }
-
-  .arrowImg {
-    display: inline-block;
-    width: 30vh;
-    height: 30vh;
-    background-image: url("../../img/arrowImg.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    bottom: 5vh;
-    right: 25vw;
-  }
+.arrowImg {
+  display: inline-block;
+  width: 30vh;
+  height: 30vh;
+  background-image: url("../../img/arrowImg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  bottom: 5vh;
+  right: 25vw;
 }

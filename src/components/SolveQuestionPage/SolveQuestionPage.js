@@ -21,19 +21,8 @@ export default function SolvePage() {
   const [cnt, setCnt] = useState(0);
   // const [nameInputFlag, setnameInputFlag] = useState(true);
 
-
-  const getData = {
-    //실제 서버에서 받는 mockData
-    name: "hee",
-    questions: [1, 1, 2, 3, 4, 5, 6, 7],
-    answers: [1, 2, 3, 4, 5, 6, 7, 8],
-  };
   const { uri } = useParams();
-
-  // const isMobile = useMediaQuery({
-  //   query: "(max-width:768px)",
-  // });
-
+  console.log(uri);
   const saveInfo = (index) => {
     // const findId = dataSet.findIndex((item) => item.index === page);
 
@@ -51,7 +40,7 @@ export default function SolvePage() {
   const checkGet = async () => {
     try {
       const response = await axios.get(
-        `http://27.96.131.106:9998/find-me/${uri}`
+        `https://bono-api.kro.kr:9998/find-me/${uri}`
       );
 
       console.log(response);
@@ -67,21 +56,19 @@ export default function SolvePage() {
     checkGet();
   }, []);
 
-
   useEffect(() => {
     if (checkState === true) {
       console.log("만든사람 answer :" + finalArr.answers);
       console.log("맞춘사람 answer : " + answers);
       for (let i = 0; i < finalArr.answers.length; i++) {
         if (finalArr.answers[i] === answers[i]) {
-          setCnt(prevCnt => prevCnt + 1);
+          setCnt((prevCnt) => prevCnt + 1);
         }
         if (finalArr.answers.length - 1 === i) {
           setScoreCheck(true);
           setCheckState(false);
         }
       }
-
     }
   }, [checkState]);
 
@@ -98,12 +85,10 @@ export default function SolvePage() {
 
   const arrIndex = A[page] - 1 || 0;
 
-
   // <div className={style.queDiv}>
   // {A && dataSet[arrIndex].que}
   // {/*처음엔 index 0이니까 dataSet[0]일거야 그 담엔 dataIndex 증가하면서 쭉쭉 받아오는 데이터마다 달라짐*/}
-  //</div> 
-
+  //</div>
 
   const handleBackBtn = (e) => {
     e.preventDefault();
@@ -120,7 +105,6 @@ export default function SolvePage() {
           <div className={style.queDiv}>"{A && dataSet[arrIndex].que}"</div>
           <div className={style.quotesImg2}></div>
         </div>
-
       </div>
 
       <div className={style.bottomContainer}>

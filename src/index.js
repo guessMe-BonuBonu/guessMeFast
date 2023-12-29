@@ -7,7 +7,7 @@ import UrlResultPage from "./components/UrlResultPage/UrlResultPage";
 import MyScore from "./components/MyScore/MyScore";
 import { createRoot } from "react-dom/client";
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
   // Route,
   // Link,
@@ -17,7 +17,8 @@ import SolvePage from "./components/SolveQuestionPage/SolveQuestionPage";
 import GetInfo from "./components/GetInfo/GetInfo";
 import SolveGetInfo from "./components/SolveGetInfo/SolveGetInfo";
 import StartPageUser from "./components/StartPageUser/StartPageUser";
-const router = createBrowserRouter([
+import { RankPage } from "./components/RankPage.js/RankPage";
+const router = createHashRouter([
   //시작페이지
   {
     path: "/",
@@ -47,13 +48,16 @@ const router = createBrowserRouter([
   },
   {
     path: "/getinfo",
-    element: <GetInfo />
+    element: <GetInfo />,
   },
   {
     path: "/score",
-    element: <MyScore />
+    element: <MyScore />,
   },
-
+  {
+    path: "/rank/:uri",
+    element: <RankPage />,
+  },
 ]);
 createRoot(document.getElementById("root")).render(
   <RecoilRoot>

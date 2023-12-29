@@ -1,6 +1,5 @@
 import style from "./UrlResultPage.module.css";
 import tagImg from "../../img/tagImg.png";
-import arrowing2 from "../../img/arrowImg2.png";
 import { urlSave } from "../../recoils/Recoil";
 import { useRecoilValue, useRecoilState } from "recoil";
 import { nameState } from "../../recoils/Recoil";
@@ -8,14 +7,16 @@ import { urlGet } from "../../recoils/Recoil";
 import { useEffect } from "react";
 import axios from "axios";
 const UrlResultPage = () => {
-  const [name, setName] = useRecoilState(nameState);
+  const name = useRecoilValue(nameState);
 
   const url = useRecoilValue(urlSave);
 
   const handleCopyClipBoard = async (text) => {
     if (urlSave !== "") {
       try {
-        await navigator.clipboard.writeText("solveGetInfo/" + text);
+        await navigator.clipboard.writeText(
+          "https://dukm-33bf4.web.app/#/" + "solve/" + text
+        );
         alert("클립보드에 링크가 복사되었어요.");
       } catch (err) {
         console.log(err);
@@ -27,7 +28,7 @@ const UrlResultPage = () => {
     //서버에서 랜덤생성된 uri로 받아오는 axios
     try {
       const response = await axios.get(
-        `http://27.96.131.106:9998/find-me/${url}`
+        `https://bono-api.kro.kr:9998/find-me/${url}`
       );
       console.log(response); //추후에 지우기
     } catch (error) {
@@ -46,13 +47,17 @@ const UrlResultPage = () => {
         <div className={style.middleBackground}>
           <div className={style.topContainer}>
             <div className={style.fontDiv}>
-              {"["}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style={{ fontWeight: "700" }}>{name}</span>
+              {"["}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" "}
+              <span style={{ fontWeight: "700" }}>{name}</span>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"]"}
               <br />
               퀴즈가 완성되었습니다!
             </div>
             <div className={style.urlDiv}>
-              <p className={style.urlP}> http://kr.vonvon.me/{url}</p>
+              <p className={style.urlP}>
+                {" "}
+                https://dukm-33bf4.web.app/#/solve/{url}
+              </p>
             </div>
           </div>
           <div className={style.bottomContainer}>
@@ -68,7 +73,6 @@ const UrlResultPage = () => {
                 URL 링크 복사
               </button>
             </div>
-
           </div>
         </div>
       </div>
