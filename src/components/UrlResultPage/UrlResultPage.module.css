@@ -1,273 +1,273 @@
 /* 데스크탑 */
 
-@media (min-width:768px) {
-    .container {
-        background-color: white;
-        height: 100vh;
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-    }
+@media (min-width: 768px) {
+  .container {
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
 
-    .backgroundImg {
-        background-color: #F7C9C9;
-        border-radius: 0 0 200px 0;
-        box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
-        height: 100vh;
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
+  .backgroundImg {
+    background-color: #f7c9c9;
+    border-radius: 0 0 200px 0;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
-    .middleBackground {
-        width: 70vw;
-        height: 70vh;
-        background-color: white;
-        position: relative;
-        bottom: 10vh;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
+  .middleBackground {
+    width: 70vw;
+    height: 70vh;
+    background-color: white;
+    position: relative;
+    bottom: 10vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 
-    .tagImg {
-        width: 15vh;
-        height: 18vh;
-        position: relative;
-        /* top:8vh; */
-        bottom: 3vh;
-        z-index: 10;
-    }
+  .tagImg {
+    width: 15vh;
+    height: 18vh;
+    position: relative;
+    /* top:8vh; */
+    bottom: 3vh;
+    z-index: 10;
+  }
 
-    .topContainer {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        flex-direction: column;
-        height: 30vh;
-    }
+  .topContainer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 30vh;
+  }
 
-    .bottomContainer {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        flex-direction: column;
-        /* height:30vh; */
-        margin-top: -2vh;
-        margin-bottom: 2vh;
-    }
+  .bottomContainer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    /* height:30vh; */
+    margin-top: -2vh;
+    margin-bottom: 2vh;
+  }
 
-    .fontDiv {
-        font-family: "Single Day";
-        font-size: 6vh;
-    }
+  .fontDiv {
+    font-family: "Single Day";
+    font-size: 6vh;
+  }
 
-    .urlDiv {
-        height: 5vh;
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        margin-top: 1.5vh;
-    }
+  .urlDiv {
+    height: 5vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 1.5vh;
+  }
 
-    .urlP {
-        background-color: #EEEEEE;
-        border-radius: 8px;
-        border: 2px solid #b1b0b0;
-        height: 4vh;
-        width: 40vw;
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.5vh;
-    }
+  .urlP {
+    background-color: #eeeeee;
+    border-radius: 8px;
+    border: 2px solid #b1b0b0;
+    height: 4vh;
+    width: 40vw;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vh;
+  }
 
-    .fontDiv2 {
-        font-family: "Single Day";
-        font-size: 2.5vh;
-        display: flex;
-        justify-content: center;
-        position: relative;
-        top: 5vh;
-    }
+  .fontDiv2 {
+    font-family: "Single Day";
+    font-size: 2.5vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 5vh;
+  }
 
-    .bottom {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin-right: 15vh;
-    }
+  .bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15vh;
+  }
 
-    .arrow2Img {
-        width: 15vh;
-        height: 18vh;
-        /* background-color: red; */
-        background-image: url("../../img/arrowImg2.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center center;
-        position: relative;
-        bottom: 2vh;
-    }
+  .arrow2Img {
+    width: 15vh;
+    height: 18vh;
+    /* background-color: red; */
+    background-image: url("../../img/arrowImg2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    bottom: 2vh;
+  }
 
-    .copyBtn {
-        width: 30vh;
-        height: 8vh;
-        font-size: 3.5vh;
-        border-radius: 104px;
-        color: white;
-        text-shadow: 2px 4px 2px gray;
-        font-family: "Jalnan";
-        background-color: #96A9D1;
-        border: none;
-        bottom: 20vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .copyBtn {
+    width: 30vh;
+    height: 8vh;
+    font-size: 3.5vh;
+    border-radius: 104px;
+    color: white;
+    text-shadow: 2px 4px 2px gray;
+    font-family: "Jalnan";
+    background-color: #96a9d1;
+    border: none;
+    bottom: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .copyBtn:hover {
-        background-color: #8c9bbd;
-    }
+  .copyBtn:hover {
+    background-color: #8c9bbd;
+  }
 }
 
 /* 모바일 */
 
-@media (max-width:768px) {
-    .container {
-        background-color: white;
-        height: 100vh;
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-    }
+@media (max-width: 768px) {
+  .container {
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
 
-    .backgroundImg {
-        background-color: #F7C9C9;
-        border-radius: 0 0 100px 0;
-        box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
-        height: 100vh;
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
+  .backgroundImg {
+    background-color: #f7c9c9;
+    border-radius: 0 0 100px 0;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
-    .middleBackground {
-        width: 75vw;
-        height: 60vh;
-        background-color: white;
-        position: relative;
-        bottom: 10vh;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
+  .middleBackground {
+    width: 75vw;
+    height: 60vh;
+    background-color: white;
+    position: relative;
+    bottom: 10vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 
-    .tagImg {
-        width: 11vh;
-        height: 13vh;
-        position: relative;
-        /* top:8vh; */
-        bottom: 3vh;
-        z-index: 10;
-    }
+  .tagImg {
+    width: 11vh;
+    height: 13vh;
+    position: relative;
+    /* top:8vh; */
+    bottom: 3vh;
+    z-index: 10;
+  }
 
-    .topContainer {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        flex-direction: column;
-        height: 30vh;
-    }
+  .topContainer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 30vh;
+  }
 
-    .bottomContainer {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        flex-direction: column;
-        /* height:30vh; */
-        margin-top: -2vh;
-        margin-bottom: 2vh;
-    }
+  .bottomContainer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    /* height:30vh; */
+    margin-top: -2vh;
+    margin-bottom: 2vh;
+  }
 
-    .fontDiv {
-        font-family: "Single Day";
-        font-size: 7vw;
-    }
+  .fontDiv {
+    font-family: "Single Day";
+    font-size: 7vw;
+  }
 
-    .urlDiv {
-        height: 5vh;
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        margin-top: 1.5vh;
-    }
+  .urlDiv {
+    height: 5vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 1.5vh;
+  }
 
-    .urlP {
-        background-color: #EEEEEE;
-        border-radius: 8px;
-        border: 2px solid #b1b0b0;
-        height: 4vh;
-        width: 60vw;
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.5vh;
-    }
+  .urlP {
+    background-color: #eeeeee;
+    border-radius: 8px;
+    border: 2px solid #b1b0b0;
+    height: 4vh;
+    width: 60vw;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vh;
+  }
 
-    .fontDiv2 {
-        font-family: "Single Day";
-        font-size: 2vh;
-        display: flex;
-        justify-content: center;
-        position: relative;
-        top: 5vh;
-    }
+  .fontDiv2 {
+    font-family: "Single Day";
+    font-size: 2vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 5vh;
+  }
 
-    .bottom {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin-right: 16vw;
-        margin-top: 2vh;
-    }
+  .bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16vw;
+    margin-top: 2vh;
+  }
 
-    .arrow2Img {
-        width: 15vh;
-        height: 18vh;
-        background-image: url("../../img/arrowImg2.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center center;
-        position: relative;
-        bottom: 1vh;
-    }
+  .arrow2Img {
+    width: 15vh;
+    height: 18vh;
+    background-image: url("../../img/arrowImg2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    bottom: 1vh;
+  }
 
-    .copyBtn {
-        width: 35vh;
-        height: 5vh;
-        font-size: 2vh;
-        border-radius: 104px;
-        color: white;
-        text-shadow: 2px 4px 2px gray;
-        font-family: "Jalnan";
-        background-color: #96A9D1;
-        border: none;
-        bottom: 20vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .copyBtn {
+    width: 35vh;
+    height: 5vh;
+    font-size: 2vh;
+    border-radius: 104px;
+    color: white;
+    text-shadow: 2px 4px 2px gray;
+    font-family: "Jalnan";
+    background-color: #96a9d1;
+    border: none;
+    bottom: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .copyBtn:hover {
-        background-color: #8c9bbd;
-    }
+  .copyBtn:hover {
+    background-color: #8c9bbd;
+  }
 }

@@ -24,11 +24,14 @@ export default function QuestionPage() {
 
     if (answers.length === 10) {
       try {
-        const response = await axios.post("https://bono-api.kro.kr:9998", {
-          name: name /*api 양식*/,
-          questions: questions,
-          answers: answers,
-        });
+        const response = await axios.post(
+          "https://bono-api.kro.kr:9998/make-me",
+          {
+            name: name /*api 양식*/,
+            questions: questions,
+            answers: answers,
+          }
+        );
         console.log("q + " + questions);
         console.log(response);
         setUrl(response.data);
@@ -38,7 +41,6 @@ export default function QuestionPage() {
         console.error(error);
       }
     }
-
   };
   console.log(url);
 
@@ -51,7 +53,6 @@ export default function QuestionPage() {
 
   const saveInfo = (index, id) => {
     // const findId = dataSet.findIndex((item) => item.index === page);
-
 
     if (answers.length <= maxPage - 1) {
       setAnswers([...answers, index]);
@@ -72,15 +73,6 @@ export default function QuestionPage() {
     if (checkState === true) checkPost();
   }, [checkState]);
 
-
-
-  const handleBackBtn = (e) => {
-    e.preventDefault();
-    if (page > 0) setPage(page - 1);
-    answers.pop();
-    questions.pop();
-  };
-
   return (
     <div className={style.backImg}>
       <div className={style.topContainer}>
@@ -90,14 +82,19 @@ export default function QuestionPage() {
           <div className={style.queDiv}>"{randomSubset[page].que}"</div>
           <div className={style.quotesImg2}></div>
         </div>
-
       </div>
 
       <div className={style.bottomContainer}>
         <div className={style.leftBar}>
-          <button onClick={handleBackBtn}></button>
+          <button
+            className="leftBtn"
+            onClick={(event) => {
+              event.preventDefault();
+              if (page > 0) setPage(page - 1);
+            }}
+          ></button>
         </div>
-        <div className={style.BtnsContainer}>
+        <div>
           {randomSubset[page].ans.map((ans, index) => (
             <button
               className={style.selectBtn}
