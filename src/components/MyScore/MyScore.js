@@ -50,7 +50,11 @@ export default function MyScore() {
           </div>
           <div className={style.Middle}>
             <div className={style.ScoreDiv}>
-              <div className={style.scoreContent}>{score}0%</div>
+              {score === 0 ? (
+                <div className={style.scoreContent}>0%</div>
+              ) : (
+                <div className={style.scoreContent}>{score}0%</div>
+              )}
             </div>
           </div>
           <div className={style.Bottom}>

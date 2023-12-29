@@ -91,6 +91,7 @@
     height: 100vh;
     width: 100vw;
   }
+
   .top {
     width: 100vw;
     height: 65vh;
@@ -102,15 +103,17 @@
     flex-direction: column;
     align-items: center;
   }
+
   .nameInsertImg {
     width: 80vw;
     height: 40vh;
-    /* background-image: url("../../img/mobileNameInfo.png");
-    background-size: contain; */
+    background-image: url("../../img/mobileNameInfo.png");
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
     margin-top: 5vh;
   }
+
   .inputBox {
     width: 50vw;
     height: 10vw;
@@ -122,15 +125,18 @@
     border-radius: 10px;
     margin-top: 10vw;
   }
+
   .inputBox:focus {
     outline: none;
   }
+
   .bottom {
     text-align: center;
     height: 30vh;
     width: 100vw;
     margin-top: 5vh;
   }
+
   .checkButton {
     width: 20vh;
     height: 10vw;
@@ -148,6 +154,7 @@
     margin-top: 5vh;
     font-family: "Jalnan";
   }
+
   .checkButton:hover {
     background-color: #8c9bbd;
     cursor: pointer;
