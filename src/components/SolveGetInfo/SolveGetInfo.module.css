@@ -80,23 +80,20 @@
   }
 }
 
-/*모바일 버전*/
+/* 모바일 */
 @media (max-width:768px) {
   .container {
     display: flex;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    /* position: fixed; */
-    height: 100vh;
-    width: 100vw;
   }
 
   .top {
     width: 100vw;
     height: 65vh;
     background-color: #f7c9c9;
-    border-radius: 0 0 120px 0;
+    border-radius: 0 0 200px 0;
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
     text-align: center;
     display: flex;
@@ -105,26 +102,25 @@
   }
 
   .nameInsertImg {
-    width: 80vw;
-    height: 40vh;
+    width: 90vw;
+    height: 35vh;
     background-image: url("../../img/mobileNameInfo.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    margin-top: 5vh;
+    margin-top: 10vh;
   }
 
   .inputBox {
-    width: 50vw;
-    height: 10vw;
+    width: 65vw;
+    height: 3vh;
     text-align: center;
-    font-size: 5vw;
+    font-size: 2.5vh;
     border: none;
     box-shadow: 2px -3px 0px 0px rgb(180, 180, 180);
     font-family: "Jalnan";
     border-radius: 10px;
-    margin-top: 10vw;
-
+    margin-top: 6vh;
   }
 
   .inputBox:focus {
@@ -136,23 +132,24 @@
     height: 30vh;
     width: 100vw;
     margin-top: 5vh;
+    /* background-color: red; */
+    /* display:flex; */
   }
 
   .checkButton {
-    width: 20vh;
-    height: 10vw;
+    width: 55vw;
+    height: 8vh;
     background-color: #96a9d1;
-    border-radius: 50px;
-    /* margin-top: 50vh; */
-    font-size: 5vw;
+    border-radius: 60px;
+    font-size: 3vh;
     color: white;
     border: none;
     text-shadow: 0 3px 4px rgba(0, 0, 0, 0.8);
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); */
     font-weight: bold;
     justify-content: center;
     align-items: center;
-    margin-top: 5vh;
+    margin-top: 2vh;
     font-family: "Jalnan";
   }
 
@@ -161,5 +158,4 @@
     cursor: pointer;
     border: none;
   }
-
 }

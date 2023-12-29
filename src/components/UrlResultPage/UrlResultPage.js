@@ -12,11 +12,10 @@ const UrlResultPage = () => {
 
   const url = useRecoilValue(urlSave);
 
-  // console.log("urlname : "+name);
   const handleCopyClipBoard = async (text) => {
     if (urlSave !== "") {
       try {
-        await navigator.clipboard.writeText("solve/" + text);
+        await navigator.clipboard.writeText("solveGetInfo/" + text);
         alert("클립보드에 링크가 복사되었어요.");
       } catch (err) {
         console.log(err);
@@ -47,10 +46,9 @@ const UrlResultPage = () => {
         <div className={style.middleBackground}>
           <div className={style.topContainer}>
             <div className={style.fontDiv}>
-              {"["}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {name}
+              {"["}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style={{ fontWeight: "700" }}>{name}</span>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"]"}
               <br />
-              {/* {`[  ${nbsp} ${name}  ]`}<br/> */}
               퀴즈가 완성되었습니다!
             </div>
             <div className={style.urlDiv}>
@@ -61,7 +59,7 @@ const UrlResultPage = () => {
             <p className={style.fontDiv2}>
               친구에게 공유해 우정을 테스트 하세요
             </p>
-            <div style={{ display: "flex", justifyContent: "center" }}>
+            <div className={style.bottom}>
               <div className={style.arrow2Img}></div>
               <button
                 className={style.copyBtn}
@@ -71,10 +69,6 @@ const UrlResultPage = () => {
               </button>
             </div>
 
-            {/* <img
-              src={arrowing2}
-              style={{ width: "7vw", position: "fixed", marginLeft: "18%" }}
-            /> */}
           </div>
         </div>
       </div>

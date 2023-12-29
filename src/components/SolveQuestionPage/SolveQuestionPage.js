@@ -19,6 +19,8 @@ export default function SolvePage() {
   const [checkState, setCheckState] = useState(false);
   const [scoreCheck, setScoreCheck] = useState(false);
   const [cnt, setCnt] = useState(0);
+  // const [nameInputFlag, setnameInputFlag] = useState(true);
+
 
   const getData = {
     //실제 서버에서 받는 mockData
@@ -27,6 +29,10 @@ export default function SolvePage() {
     answers: [1, 2, 3, 4, 5, 6, 7, 8],
   };
   const { uri } = useParams();
+
+  // const isMobile = useMediaQuery({
+  //   query: "(max-width:768px)",
+  // });
 
   const saveInfo = (index) => {
     // const findId = dataSet.findIndex((item) => item.index === page);
@@ -92,27 +98,36 @@ export default function SolvePage() {
 
   const arrIndex = A[page] - 1 || 0;
 
+
+  // <div className={style.queDiv}>
+  // {A && dataSet[arrIndex].que}
+  // {/*처음엔 index 0이니까 dataSet[0]일거야 그 담엔 dataIndex 증가하면서 쭉쭉 받아오는 데이터마다 달라짐*/}
+  //</div> 
+
+
+  const handleBackBtn = (e) => {
+    e.preventDefault();
+    if (page > 0) setPage(page - 1);
+    answers.pop();
+  };
+
   return (
     <div className={style.backImg}>
       <div className={style.topContainer}>
         <Progressbar page={page} />
-        <div className={style.queDiv}>
-          {A && dataSet[arrIndex].que}
-          {/*처음엔 index 0이니까 dataSet[0]일거야 그 담엔 dataIndex 증가하면서 쭉쭉 받아오는 데이터마다 달라짐*/}
+        <div className={style.queContainer}>
+          <div className={style.quotesImg1}></div>
+          <div className={style.queDiv}>"{A && dataSet[arrIndex].que}"</div>
+          <div className={style.quotesImg2}></div>
         </div>
+
       </div>
 
       <div className={style.bottomContainer}>
         <div className={style.leftBar}>
-          <button
-            className="leftBtn"
-            onClick={(event) => {
-              event.preventDefault();
-              if (page > 0) setPage(page - 1);
-            }}
-          ></button>
+          <button onClick={handleBackBtn}></button>
         </div>
-        <div>
+        <div className={style.BtnsContainer}>
           {A &&
             dataSet[arrIndex].ans.map((ans, index) => (
               <button
