@@ -8,6 +8,7 @@ import { solveNameState } from "../../recoils/Recoil";
 import { useRecoilState } from "recoil";
 import axios from "axios";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 export default function MyScore() {
   const answerScore = 0;
   const myValue = useRecoilValue(questionState);
@@ -39,6 +40,13 @@ export default function MyScore() {
     checkGet();
   }, []);
 
+  const navigate = useNavigate();
+  const moveToHome = () => {
+    navigate("/");
+  }
+  const moveToLank = () => {
+    navigate("/rank/" + url);
+  }
   return (
     <div className={style.borderContainer}>
       <div className={style.Container}>
@@ -58,14 +66,11 @@ export default function MyScore() {
             </div>
           </div>
           <div className={style.Bottom}>
-            <Link to={`/rank/${url}`}>
-              <button className={style.scoreBtn}>내 순위 확인하기</button>
-            </Link>
+            <button className={style.scoreBtn} onClick={moveToLank}>내 순위 확인하기</button>
+
             <div className={style.makeBtnBox}>
               <div className={style.img1}></div>
-              <Link to="/">
-                <button className={style.Btn}>내 퀴즈 만들기</button>
-              </Link>{" "}
+              <button className={style.Btn} onClick={moveToHome}>내 퀴즈 만들기</button>
               <div className={style.img2}></div>
             </div>
           </div>
