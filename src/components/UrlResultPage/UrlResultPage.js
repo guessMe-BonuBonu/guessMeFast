@@ -15,7 +15,7 @@ const UrlResultPage = () => {
     if (urlSave !== "") {
       try {
         await navigator.clipboard.writeText(
-          "https://dukm-33bf4.web.app/#/" + "solve/" + text
+          "https://dukm-33bf4.web.app/#/" + "solveGetInfo/" + text
         );
         alert("클립보드에 링크가 복사되었어요.");
       } catch (err) {
@@ -56,7 +56,7 @@ const UrlResultPage = () => {
             <div className={style.urlDiv}>
               <p className={style.urlP}>
                 {" "}
-                https://dukm-33bf4.web.app/#/solve/{url}
+                https://dukm-33bf4.web.app/#/solveGetInfo/{url}
               </p>
             </div>
           </div>
