@@ -1,0 +1,92 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #F7C9C9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whiteDiv {
+    width: 80vw;
+    height: 80vh;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.rankerBlock {
+    width: 70vw;
+    height: 10vh;
+    border: 1px solid #F7C9C9;
+    border-radius: 10px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: row; */
+    margin-bottom: 2vh;
+}
+
+.RankerInnerBox {
+    width: 60vw;
+    height: 10vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    /* background-color: aliceblue; */
+
+}
+
+.rankImg1,
+.rankImg2,
+.rankImg3,
+.rankImg {
+    width: 5vh;
+    height: 5vh;
+}
+
+.rankImg1 {
+    background-image: url("../../img/rank11.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+
+.rankImg2 {
+    background-image: url("../../img/two.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.rankImg3 {
+    background-image: url("../../img/three.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.rankImg {
+    background-image: url("../../img/smile.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.imgDiv,
+.rank,
+.score,
+.name {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}

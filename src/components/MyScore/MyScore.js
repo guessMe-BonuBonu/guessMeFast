@@ -45,6 +45,7 @@ export default function MyScore() {
     navigate("/");
   }
   const moveToLank = () => {
+    console.log(url);
     navigate("/rank/" + url);
   }
   return (
