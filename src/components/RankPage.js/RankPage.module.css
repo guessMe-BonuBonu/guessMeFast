@@ -8,18 +8,24 @@
 }
 
 .whiteDiv {
-    width: 80vw;
+    width: 70vw;
     height: 80vh;
     background-color: white;
     border-radius: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.firstRankerBlock {
+    margin-top: 5vh;
 }
 
 .rankerBlock {
-    width: 70vw;
+    width: 50vw;
     height: 10vh;
     border: 1px solid #F7C9C9;
     border-radius: 10px;
@@ -32,14 +38,14 @@
 }
 
 .RankerInnerBox {
-    width: 60vw;
+    width: 40vw;
     height: 10vh;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: space-around;
     flex-direction: row;
-    /* background-color: aliceblue; */
+
 
 }
 
@@ -81,12 +87,27 @@
 }
 
 .imgDiv,
-.rank,
-.score,
-.name {
+.rankDiv,
+.scoreDiv,
+.nameDiv {
     width: 25%;
     height: 100%;
     display: flex;
     text-align: center;
     align-items: center;
 }
+
+.scoreDiv {
+    margin-left: 4vw;
+}
+
+.rank,
+.name,
+.score {
+    font-family: "Jua";
+    /* font-family: "Single Day"; */
+}
+
+/* .name {
+    font-family: "Single Day";
+} */
