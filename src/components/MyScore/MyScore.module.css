@@ -1,5 +1,5 @@
 /* 데스크탑 */
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .borderContainer {
     background-color: white;
   }
@@ -32,8 +32,8 @@
     height: 95vh;
     background-color: transparent;
     position: absolute;
-    left: 50vw-(55vw/2);
-    top: 50vh-(80vh/2);
+    left: 50vw- (55vw/2);
+    top: 50vh- (80vh/2);
     background-image: url("../../img/solveScoreBorderImg.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -68,7 +68,6 @@
     background-position: center center;
     width: 70vh;
     height: 25vh;
-
   }
 
   .scoreContent {
@@ -127,7 +126,6 @@
     position: relative;
     bottom: 1.5vh;
     right: 2vh;
-
   }
 
   .BtnDiv {
@@ -157,7 +155,7 @@
   }
 
   .Btn:hover {
-    background-color: #F7C9C9;
+    background-color: #f7c9c9;
     cursor: pointer;
   }
 
@@ -191,13 +189,10 @@
     bottom: 5vh;
     right: 25vw;
   }
-
-
 }
 
-
 /* 모바일 */
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .borderContainer {
     background-color: white;
   }
@@ -229,8 +224,8 @@
     height: 65vh;
     background-color: transparent;
     position: absolute;
-    left: 50vw-(80vw/2);
-    top: 50vh-(50vh/2);
+    left: 50vw- (80vw/2);
+    top: 50vh- (50vh/2);
     background-image: url("../../img/mobileSolveScoreBorderImg.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -254,7 +249,6 @@
   }
 
   .ScoreDiv {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -265,7 +259,6 @@
     background-position: center center;
     width: 65vw;
     height: 20vh;
-
   }
 
   .scoreContent {
@@ -323,7 +316,6 @@
     position: relative;
     bottom: 1.5vh;
     right: 2vh;
-
   }
 
   .BtnDiv {
@@ -350,11 +342,10 @@
     text-shadow: 2px 4px 2px gray;
     font-family: "Jua";
     z-index: 10;
-
   }
 
   .Btn:hover {
-    background-color: #F7C9C9;
+    background-color: #f7c9c9;
   }
 
   .score {
