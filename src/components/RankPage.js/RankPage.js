@@ -35,6 +35,7 @@ export function RankPage() {
 
   return (
     <div className={style.container}>
+      <div className={style.rankTitle}>▶&nbsp;순&nbsp;&nbsp;&nbsp;&nbsp;위&nbsp;◀</div>
       <div className={style.whiteDiv}>
         {rankArr.map((item, index) => (
           <div
