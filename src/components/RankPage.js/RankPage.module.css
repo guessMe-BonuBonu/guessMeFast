@@ -1,113 +1,246 @@
-.container {
-    width: 100vw;
-    height: 100vh;
-    background-color: #F7C9C9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/* 데스크탑 */
+@media (min-width:768px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+        background-color: #F7C9C9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
 
-.whiteDiv {
-    width: 70vw;
-    height: 80vh;
-    background-color: white;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    flex-direction: column;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
+    .rankTitle {
+        font-size: 5vh;
+        font-family: "Jua";
+    }
 
-.firstRankerBlock {
-    margin-top: 5vh;
-}
+    .whiteDiv {
+        width: 70vw;
+        height: 80vh;
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
 
-.rankerBlock {
-    width: 50vw;
-    height: 10vh;
-    border: 1px solid #F7C9C9;
-    border-radius: 10px;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    /* flex-direction: row; */
-    margin-bottom: 2vh;
-}
+    .firstRankerBlock {
+        margin-top: 5vh;
+    }
 
-.RankerInnerBox {
-    width: 40vw;
-    height: 10vh;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: row;
+    .rankerBlock {
+        width: 50vw;
+        height: 10vh;
+        border: 1px solid #F7C9C9;
+        border-radius: 10px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        /* flex-direction: row; */
+        margin-bottom: 2vh;
+    }
 
+    .RankerInnerBox {
+        width: 40vw;
+        height: 10vh;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        font-size: 4vh;
+    }
 
-}
+    .rankImg1,
+    .rankImg2,
+    .rankImg3,
+    .rankImg {
+        width: 5vh;
+        height: 5vh;
+    }
 
-.rankImg1,
-.rankImg2,
-.rankImg3,
-.rankImg {
-    width: 5vh;
-    height: 5vh;
-}
+    .rankImg1 {
+        background-image: url("../../img/rank11.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
 
-.rankImg1 {
-    background-image: url("../../img/rank11.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
+    }
 
-}
+    .rankImg2 {
+        background-image: url("../../img/two.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
 
-.rankImg2 {
-    background-image: url("../../img/two.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
+    .rankImg3 {
+        background-image: url("../../img/three.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
 
-.rankImg3 {
-    background-image: url("../../img/three.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
+    .rankImg {
+        background-image: url("../../img/smile.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
 
-.rankImg {
-    background-image: url("../../img/smile.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
+    .imgDiv,
+    .rankDiv,
+    .scoreDiv,
+    .nameDiv {
+        width: 25%;
+        height: 100%;
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
 
-.imgDiv,
-.rankDiv,
-.scoreDiv,
-.nameDiv {
-    width: 25%;
-    height: 100%;
-    display: flex;
-    text-align: center;
-    align-items: center;
-}
+    .scoreDiv {
+        margin-left: 4vw;
+    }
 
-.scoreDiv {
-    margin-left: 4vw;
-}
+    .rank,
+    .name,
+    .score {
+        font-family: "Jua";
+        /* font-family: "Single Day"; */
+    }
 
-.rank,
-.name,
-.score {
-    font-family: "Jua";
-    /* font-family: "Single Day"; */
-}
-
-/* .name {
+    /* .name {
     font-family: "Single Day";
 } */
+
+}
+
+/* 모바일 */
+@media(max-width:768px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+        background-color: #F7C9C9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .rankTitle {
+        font-size: 5vh;
+        font-family: "Jua";
+    }
+
+    .whiteDiv {
+        width: 70vw;
+        height: 80vh;
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .firstRankerBlock {
+        margin-top: 5vh;
+    }
+
+    .rankerBlock {
+        width: 50vw;
+        height: 10vh;
+        border: 1px solid #F7C9C9;
+        border-radius: 10px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        /* flex-direction: row; */
+        margin-bottom: 2vh;
+    }
+
+    .RankerInnerBox {
+        width: 40vw;
+        height: 10vh;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        font-size: 4vw;
+
+
+    }
+
+    .rankImg1,
+    .rankImg2,
+    .rankImg3,
+    .rankImg {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .rankImg1 {
+        background-image: url("../../img/rank11.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+    }
+
+    .rankImg2 {
+        background-image: url("../../img/two.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .rankImg3 {
+        background-image: url("../../img/three.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .rankImg {
+        background-image: url("../../img/smile.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .imgDiv,
+    .rankDiv,
+    .scoreDiv,
+    .nameDiv {
+        width: 25%;
+        height: 100%;
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+
+    .scoreDiv {
+        margin-left: 4vw;
+    }
+
+    .rank,
+    .name,
+    .score {
+        font-family: "Jua";
+        /* font-family: "Single Day"; */
+    }
+
+    /* .name {
+        font-family: "Single Day";
+    } */
+}

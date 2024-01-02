@@ -73,6 +73,19 @@ export default function QuestionPage() {
     if (checkState === true) checkPost();
   }, [checkState]);
 
+  useEffect(() => {
+    console.log("page=" + page);
+  }, [page]);
+
+  const moveToBackPage = (event) => {
+    event.preventDefault();
+    if (page > 0) {
+      setPage(page - 1);
+      questions.pop();
+      answers.pop();
+    }
+  }
+
   return (
     <div className={style.backImg}>
       <div className={style.topContainer}>
@@ -88,10 +101,7 @@ export default function QuestionPage() {
         <div className={style.leftBar}>
           <button
             className="leftBtn"
-            onClick={(event) => {
-              event.preventDefault();
-              if (page > 0) setPage(page - 1);
-            }}
+            onClick={moveToBackPage}
           ></button>
         </div>
         <div>
