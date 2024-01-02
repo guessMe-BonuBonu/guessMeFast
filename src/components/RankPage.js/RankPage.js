@@ -1,15 +1,14 @@
-import styled from "styled-components";
 import style from "./RankPage.module.css";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
-
 
 export function RankPage() {
   const [rankArr, setRankArr] = useState([]);
+  const [dataFetched, setDataFetched] = useState(false);
 
   const { uri } = useParams();
+
   const RankGet = async () => {
     try {
       const response = await axios.get(
@@ -17,8 +16,9 @@ export function RankPage() {
       );
 
       console.log(response);
-      if (response != "undefined" && response != null) {
+      if (response && response.data) {
         setRankArr(response.data);
+        setDataFetched(true);
       }
     } catch (error) {
       console.error(error + "에러다");
@@ -26,29 +26,40 @@ export function RankPage() {
   };
 
   useEffect(() => {
-    RankGet();
-  }, []);
-  console.log(rankArr);
+    if (!dataFetched) {
+      RankGet();
+    }
+  }, [dataFetched]);
 
+  console.log(rankArr);
 
   return (
     <div className={style.container}>
       <div className={style.rankTitle}>▶&nbsp;순&nbsp;&nbsp;&nbsp;&nbsp;위&nbsp;◀</div>
       <div className={style.whiteDiv}>
         {rankArr.map((item, index) => (
-          <div className={`${style.rankerBlock} ${index === 0 ? style.firstRankerBlock : ""}`}>
+          <div
+            className={`${style.rankerBlock} ${
+              index === 0 ? style.firstRankerBlock : ""
+            }`}
+            key={index}
+          >
             <div className={style.RankerInnerBox}>
               <div className={style.imgDiv}>
                 {item.rank === 1 && <div className={style.rankImg1} />}
                 {item.rank === 2 && <div className={style.rankImg2} />}
                 {item.rank === 3 && <div className={style.rankImg3} />}
-                {item.rank !== 1 && item.rank !== 2 && item.rank !== 3 && <div className={style.rankImg} />}
+                {item.rank !== 1 && item.rank !== 2 && item.rank !== 3 && (
+                  <div className={style.rankImg} />
+                )}
               </div>
               <div className={style.rankDiv}>
                 <div className={style.rank}>{item.rank}등</div>
               </div>
               <div className={style.nameDiv}>
-                <div className={style.name}>{item.name != null ? item.name : null}</div>
+                <div className={style.name}>
+                  {item.name != null ? item.name : null}
+                </div>
               </div>
               <div className={style.scoreDiv}>
                 {item.score === 0 ? (
@@ -64,4 +75,3 @@ export function RankPage() {
     </div>
   );
 }
-
